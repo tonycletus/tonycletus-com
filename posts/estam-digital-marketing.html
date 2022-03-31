@@ -134,7 +134,7 @@
       <div id="sib-form-container" class="sib-form-container">
         <div id="subscribers" class="sib-container--medium sib-container--vertical"
           style="background-color:var(--background-color); margin-top:-50px;max-width:350px; border-width:0px; border-color:#C0CCD9; border-style:solid;">
-          <form name="Subscribers" action="/#subscribers; reset()" method="POST" id="my_form" data-netlify="true">
+          <form name="Subscribers" action="/#subscribers" method="POST" id="my_form" data-netlify="true">
             
             <!-- Title -->
             <div style="padding: 4px 0;">
@@ -150,7 +150,7 @@
                 <div class="form__entry entry_block">
                   <div class="form__label-row ">
                     <div class="entry__field"> 
-                      <input class="input" type="email" name="email" 
+                      <input class="input" id="email" type="email" name="email" 
                         autocomplete="off" placeholder="Your email address"
                         style="font-family:&quot;Poppins&quot;, sans-serif; font-size: 16px; background-color: var(--background-color); color: var(--text-color);" data-required="true"
                         required />
@@ -238,8 +238,10 @@
             icon: 'success',
             title: 'Thank you for your submission!',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
           })
+          document.getElementById('email').value = "";
+
           } else {
             Swal.fire({
             position: 'top-end',
@@ -247,8 +249,9 @@
             title: 'Oops...',
             text: 'Failed! Please check your internet connection',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
           })
+          document.getElementById('email').value = "";
             
           }
         });
