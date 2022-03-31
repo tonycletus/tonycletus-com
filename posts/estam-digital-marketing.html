@@ -132,10 +132,9 @@
     
     <div class="sib-form">
       <div id="sib-form-container" class="sib-form-container">
-  
-        <div id="sib-container" class="sib-container--medium sib-container--vertical"
+        <div id="subscribers" class="sib-container--medium sib-container--vertical"
           style="background-color:var(--background-color); margin-top:-50px;max-width:350px; border-width:0px; border-color:#C0CCD9; border-style:solid;">
-          <form name="Subscribers" method="POST" id="my_form" data-netlify="true">
+          <form name="Subscribers" action="/#subscribers" method="POST" id="my_form" data-netlify="true">
             
             <!-- Title -->
             <div style="padding: 4px 0;">
@@ -218,24 +217,30 @@
     displayYear.innerHTML = currentYear;
 
     // Submit form with AJAX
-    document
-      .querySelector("form")
-      .addEventListener("submit", handleSubmit);
+    let sendForm = document.querySelector("#subscribers form");
+      
+      sendForm.addEventListener('submit', e => {
+        e.preventDefault();
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      let myForm = document.getElementById("my_form");
-      let formData = new FormData(myForm);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(() => console.log("Form successfully submitted"))
-        .catch((error) => alert(error));
-    };
+        const formData = new FormData(sendForm);
+        fetch(testForm.getAttribute('action'), {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+          },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(res => {
+          if (res) {
+           alert('Thank you for your submission!');
+          } else {
+            alert('Failed! Please check your internet connection');
+          }
+        });
+      });
+
   </script>
-  <script async src="https://sibforms.com/forms/end-form/build/main.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-01RKG7HC0F');</script>
 </body>
