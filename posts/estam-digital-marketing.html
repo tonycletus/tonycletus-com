@@ -134,7 +134,7 @@
       <div id="sib-form-container" class="sib-form-container">
         <div id="subscribers" class="sib-container--medium sib-container--vertical"
           style="background-color:var(--background-color); margin-top:-50px;max-width:350px; border-width:0px; border-color:#C0CCD9; border-style:solid;">
-          <form name="Subscribers" action="/#subscribers" method="POST" id="my_form" data-netlify="true">
+          <form name="Subscribers" action="/#subscribers; reset()" method="POST" id="my_form" data-netlify="true">
             
             <!-- Title -->
             <div style="padding: 4px 0;">
@@ -233,14 +233,29 @@
         })
         .then(res => {
           if (res) {
-           alert('Thank you for your submission!');
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Thank you for your submission!',
+            showConfirmButton: false,
+            timer: 1500
+          })
           } else {
-            alert('Failed! Please check your internet connection');
+            Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Failed! Please check your internet connection',
+            showConfirmButton: false,
+            timer: 1500
+          })
+            
           }
         });
       });
 
   </script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-01RKG7HC0F');</script>
 </body>
