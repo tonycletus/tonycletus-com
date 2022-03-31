@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" /> </noscript>
     <link rel="stylesheet" href="boxicons/css/boxicons.min.css" media="print" onload="this.media='all'"> 
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -101,7 +101,7 @@
         </div>
         <ul>
           <li><a
-              href="estam-digital-marketing.html">Tools mentioned at the Digital Marketing Program conducted at ESTAM University</a></li>
+              href="posts/estam-digital-marketing.html">Tools mentioned at the Digital Marketing Program conducted at ESTAM University</a></li>
           <li><a
               href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7">Silicon
               Valley is not Just A Place, It is A State of Mind</a></li>
@@ -195,7 +195,7 @@
       </div>
       <footer>
         
-        <p>© 2021 TonyCletus</p>
+        <p>© <span id="current_year"></span> TonyCletus</p>
       </footer>
     </div>
   </div>
@@ -221,6 +221,12 @@
         applyTheme(this.value);
       });
     });
+
+    // Display current year
+    let displayYear = document.getElementById("current_year");
+    let currentYear =  new Date().getFullYear();
+    displayYear.innerHTML = currentYear;
+
   </script>
   <script async src="https://sibforms.com/forms/end-form/build/main.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
