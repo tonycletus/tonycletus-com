@@ -122,8 +122,8 @@
       height: auto;
       border-radius: 5px;
       --background-color: var(--dark-background-color);
-      padding: 20px;
-      margin: 5px 0;
+      padding: 10px;
+      margin: 0;
     }
 
     .nft-container {
@@ -132,8 +132,8 @@
       height: auto;
       min-height: 400px;
       border-radius: 5px;
-      background:#37352F;
-      margin: 5px 0;
+      background:rgba(55, 53, 47, 0.4);
+      margin: 0;
       display: flex;
       flex-wrap: wrap;
     }
