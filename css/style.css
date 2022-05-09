@@ -111,7 +111,7 @@
 
     .banner {
       width: 100%;
-      max-width: 960px;
+      max-width: 940px;
       height: auto;
       border-radius: 5px;
     }
@@ -125,7 +125,7 @@
 
     .nft-contact {
       width: 100%;
-      max-width: 960px;
+      max-width: 940px;
       height: auto;
       border-radius: 5px;
       background:rgba(55, 53, 47, 0.4);
@@ -136,7 +136,7 @@
 
     .nft-container {
       width: 100%;
-      max-width: 960px;
+      max-width: 940px;
       height: auto;
       border-radius: 5px;
       background:rgba(55, 53, 47, 0.4);
