@@ -198,10 +198,8 @@
     }
 
     .mode .mode-type {
-      color: var(--text-color);
+      background-color: var(--text-color);
     }
-
-    .otp
 
     @media (min-width:320px) {
       h1 {
