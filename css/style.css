@@ -193,14 +193,6 @@
     
     }
 
-    .mode {
-      background-color: var(--background-color);
-    }
-
-    .mode .mode-type {
-      background-color: var(--text-color);
-    }
-
     @media (min-width:320px) {
       h1 {
         font-size: 25px;
