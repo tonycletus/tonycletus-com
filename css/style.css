@@ -2,6 +2,14 @@
       font-size: 16px;
     }
 
+    .mobile-screen {
+      display: none;
+    }
+
+    .large-screen {
+      display: block;
+    }
+
     body {
       --text-color: #37352F;
       --background-color: #ffffff;
@@ -113,7 +121,6 @@
       max-width: 280px;
       height: auto;
       border-radius: 5px;
-      margin: 2px;
     }
 
     .nft-contact {
@@ -121,19 +128,20 @@
       max-width: 960px;
       height: auto;
       border-radius: 5px;
-      --background-color: var(--dark-background-color);
+      background:rgba(55, 53, 47, 0.4);
+      color: var(--text-color);
       padding: 10px;
-      margin: 0;
+      margin: 10px 0;
     }
 
     .nft-container {
       width: 100%;
-      max-width: 1000px;
+      max-width: 960px;
       height: auto;
-      min-height: 400px;
       border-radius: 5px;
       background:rgba(55, 53, 47, 0.4);
       margin: 0;
+      padding: 10px;
       display: flex;
       flex-wrap: wrap;
     }
@@ -152,7 +160,7 @@
     }
 
     .v-text {
-      color:  #ffffff;
+      color: var(--text-color);
     }
 
     .v-link:hover, .v-text:hover {
@@ -270,6 +278,32 @@
         width: 100px;
       }
     }
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+
+      .mobile-screen {
+        display: block;
+      }
+
+      .mySlides {
+        display:none;
+      }
+
+      .img-mobile {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        border-radius: 5px;
+      }
+    
+      .large-screen {
+        display: none;
+
+      }
+
+  }
+
 
 
     

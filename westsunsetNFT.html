@@ -8,7 +8,7 @@
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="https://tonycletus.com/westsunsetNFT" />
+  <meta property="og:url" content="https://tonycletus.com/west-sunset-NFT" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tony Cletus - West Sunset NFT" />
   <meta property="og:image" content="https://tonycletus.com/img/featured.png" />
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="boxicons/css/boxicons.min.css" media="print" onload="this.media='all'"> 
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -61,10 +62,18 @@
         </div>
         
         <div class="nft-contact">
- 
-            <p>This collection is a reflection of beautiful dreams which means, dreams that have the tendency to impact positive change on the world. People dream dreams but only those who believe in the beauty of their dreams can achieve them, no matter how big they are. A holder of the West Sunset has a strong will to bring their colourful dreams to reality.</p>
+          <div class="segment-title">
+            <h2>About West Sunset NFT <i class="topic-icon bx bx-home bx-burst-hover"></i></h2>
+          </div>
+            <p>This collection is a reflection of beautiful dreams which means, 
+            <br>dreams that have the tendency to impact positive change on the world. </p>
+            <p>People dream dreams but only those who believe in the beauty of their dreams can achieve them, 
+            <br>no matter how big they are.</p>
+            <p>A holder of the West Sunset has a strong will to bring their colourful dreams to reality.
+            <br>West Sunset NFT is unique digital photography collection living on the Ethereum blockchain. Your Bored</p>
 
             <blockquote>
+              <h2>The Sunset Poem <i class="topic-icon bx bx-music bx-burst-hover"></i></h2>
                 <p>"Out of the sunset's red<br>
                     Into the blushing sea,<br>
                     The winds of day drop dead<br>
@@ -83,14 +92,12 @@
                 </blockquote>
 
                 <div class="cta">
-                    <button class="cta-btn"><a href="https://opensea.io/collection/west-sunset">Buy on OpenSea</a></button>
+                    <button class="cta-btn"><a href="https://opensea.io/collection/west-sunset">Buy on OpenSea <i class="topic-icon bx bx-swim bx-burst-hover"></i></a></button>
                 </div>
         </div>
 
-        
-        
         <div class="nft-container">
-            <ul>
+            <ul class="large-screen">
                     <img class="nft-img" src="img/sunset 1.jpeg">
                     <img class="nft-img" src="img/sunset-15.jpeg">
                     <img class="nft-img" src="img/sunset-3.jpeg">
@@ -98,13 +105,33 @@
                     <img class="nft-img" src="img/sunset-11.jpeg"> 
                     <img class="nft-img" src="img/sunset-16.jpeg"> 
             </ul>
+            <div class="w3-content w3-section mobile-screen" style="max-width:500px">
+              <img class="mySlides img-mobile" src="img/sunset-3.jpeg">
+
+            </div>
             <figcaption class="verified">
-                <span class="v-text">Verified links:</span>
-                <a class="v-link" target="_blank" href="https://opensea.io/collection/west-sunset">OpenSea</a>
-                <a class="v-link" target="_blank" href="https://twitter.com/iamtonycletus">Twitter</a>
-                <a class="v-link" target="_blank" href="mailto:tc@tonycletus.com">Email</a>
+              <span class="v-text">VERIFIED SMART CONTRACT ADDRESS:</span>
+              <a class="v-link" target="_blank" href="https://etherscan.io/address/0x495f947276749ce646f68ac8c248420045cb7b5e">0x495f947276749ce646f68ac8c248420045cb7b5e</a>
+              <i style="font-size:20px;" class="topic-icon bx bx-badge-check bx-burst-hover"></i>
             </figcaption>
+            <figcaption class="verified">
+              <span class="v-text">VERIFIED LINKS:</span>
+              <a class="v-link" target="_blank" href="https://opensea.io/collection/west-sunset">OpenSea</a>
+              <a class="v-link" target="_blank" href="https://twitter.com/iamtonycletus">Twitter</a>
+              <a class="v-link" target="_blank" href="mailto:tc@tonycletus.com">Email</a>
+              <i style="font-size:20px;" class="topic-icon bx bx-badge-check bx-burst-hover"></i>
+          </figcaption>
       </div>
+
+      <div class="nft-contact">
+          <div class="segment-title">
+            <h2>Team&nbsp;</h2><i class="topic-icon bx bx-group bx-burst-hover"></i>
+          </div>
+            <ul>
+              <li><a href="https://twitter.com/iamtonycletus">Tony Cletus</a> - Creator</li>
+              <li><a href="https://twitter.com/jenny_ekeh">Jennifer Ekeh</a> - Co-creator</li>
+          </ul>
+        </div>
       
     <br><br><br>
     
@@ -240,6 +267,22 @@
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-01RKG7HC0F');</script>
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
 </body>
 
 </html>
