@@ -193,6 +193,16 @@
     
     }
 
+    .mode {
+      background-color: var(--background-color);
+    }
+
+    .mode .mode-type {
+      color: var(--text-color);
+    }
+
+    .otp
+
     @media (min-width:320px) {
       h1 {
         font-size: 25px;
