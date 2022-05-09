@@ -162,7 +162,6 @@
 
     .v-text {
       color: var(--text-color);
-      font-weight: bolder;
     }
 
     .v-link:hover, .v-text:hover {
