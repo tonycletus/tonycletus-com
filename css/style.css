@@ -316,7 +316,7 @@
       }
   
       .nft-contact {
-        max-width: 844px;
+        max-width: 712px;
         height: auto;
         border-radius: 5px;
         background:rgba(55, 53, 47, 0.4);
@@ -326,7 +326,7 @@
       }
   
       .nft-container {
-        max-width: 844px;
+        max-width: 712px;
         height: auto;
         border-radius: 5px;
         background:rgba(55, 53, 47, 0.4);
@@ -338,7 +338,7 @@
 
       .banner {
         width: none;
-        max-width: 844px;
+        max-width: 712px;
       }
   
       .verified {
