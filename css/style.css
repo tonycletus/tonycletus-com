@@ -342,8 +342,14 @@
         margin: 4px 0;
       }
 
-      body {
-        margin-left: -50px;
+      .container {
+        margin-left: 2px;
+        margin-right: 2px;
+        width:100%;
+      }
+
+      .banner {
+        max-width: 400px;
       }
 
   }
