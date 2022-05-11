@@ -342,6 +342,10 @@
         margin: 4px 0;
       }
 
+      body {
+        margin-left: -50px;
+      }
+
   }
 
 
