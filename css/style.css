@@ -311,12 +311,12 @@
       }
 
       .nft-img {
-        width: 50%;
+        width: none;
         max-width: 250px;
       }
   
       .nft-contact {
-        max-width: 844px;
+        max-width: 400px;
         height: auto;
         border-radius: 5px;
         background:rgba(55, 53, 47, 0.4);
@@ -326,7 +326,7 @@
       }
   
       .nft-container {
-        max-width: 844px;
+        max-width: 400px;
         height: auto;
         border-radius: 5px;
         background:rgba(55, 53, 47, 0.4);
@@ -334,11 +334,6 @@
         padding: 8px;
         display: flex;
         flex-wrap: wrap;
-      }
-
-      .banner {
-        width: 50%;
-        max-width: 844px;
       }
   
       .verified {
