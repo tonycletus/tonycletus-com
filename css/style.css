@@ -97,6 +97,11 @@
       margin-right: 20px;
     }
 
+    .container-2 {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
     .mb-5 {
         margin-bottom: 5px;
         margin-top: 20px;
@@ -342,13 +347,10 @@
         margin: 4px 0;
       }
 
-      .container {
-        margin-left: 2px;
-        margin-right: 10px;
+      .container-2 {
+        margin-left: 0px;
+        margin-right: 0px;
         width:100%;
-      }
-
-      .banner {
         max-width: 400px;
       }
 
