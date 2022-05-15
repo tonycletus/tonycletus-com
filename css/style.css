@@ -181,6 +181,8 @@
 
     .cta {
       padding: 15px;
+      max-width: 926px;
+      height: auto;
       text-align: center;
     }
 
