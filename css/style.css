@@ -362,6 +362,10 @@
         font-size:12px;
         font-weight:500;
       }
+      .cta-btn {
+        padding: 12px 14px;
+        font-size: 18px;
+      }
   }
 
 
