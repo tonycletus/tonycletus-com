@@ -354,8 +354,13 @@
         max-width: 400px;
       }
 
-      .bigger {
+      .bigger-2{
         padding: 0 10px;
+      }
+
+      .squeeze {
+        overflow-wrap: break-word;
+        hyphens:auto;
       }
   }
 
