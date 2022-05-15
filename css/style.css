@@ -359,8 +359,7 @@
       }
 
       .squeeze {
-        overflow-wrap: break-word;
-        hyphens:auto;
+        font-size:12px;
       }
   }
 
