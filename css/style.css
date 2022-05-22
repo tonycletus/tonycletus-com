@@ -107,6 +107,10 @@
         margin-top: 20px;
     }
 
+    .mb-1 {
+      margin-bottom: 4px;
+    }
+
     .sib-submit-btn {
       font-size: 18px; 
       text-align: left; 
