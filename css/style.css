@@ -47,6 +47,7 @@
 
     a {
       color: var(--hyperlink);
+      text-decoration: none;
     }
 
     a:hover {
