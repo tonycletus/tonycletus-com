@@ -11,21 +11,26 @@
   <meta property="og:url" content="https://tonycletus.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Hi, I&#x27;m Tony Cletus" />
-  <meta property="og:image"
-    content="https://res.cloudinary.com/tonycletus/image/upload/v1610314711/icon_1_s3j4l2.jpg" />
+  <meta property="og:image" content="img/icons/icon-152x152.png" />
   <meta property="og:image:alt" content="Hi, I&#x27;m Tony Cletus" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Hi, I&#x27;m Tony Cletus" />
   <meta name="next-head-count" content="17" /> <noscript data-n-css=""></noscript>
-  <link rel="icon" href="https://res.cloudinary.com/tonycletus/image/upload/v1610314711/icon_1_s3j4l2.jpg" />
+  <meta name="theme-color" content="#f0f2a1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="icon" href="img/favicon.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" media="print"
-    onload="this.media='all'" /> <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" /> </noscript>
-    <link rel="stylesheet" href="boxicons/css/boxicons.min.css" media="print" onload="this.media='all'"> 
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" media="print" onload="this.media='all'" /> <noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" /> </noscript>
+  <link rel="stylesheet" href="boxicons/css/boxicons.min.css" media="print" onload="this.media='all'"> 
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -33,6 +38,7 @@
     <div class="line"></div>
     <div class="container">
       <div class="heading">
+        <img src="img/logo.png" alt="Tony Cletus" style="width:100%; max-width:32px; height:auto; border-radius: 100%; margin: 0; padding:0;"/>&nbsp; 
         <h1>TONY CLETUS</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
         <a href="https://twitter.com/iamtonycletus">
         <i class="topic-icon bx bxl-twitter bx-tada" style="animation-duration:10s"></i>
@@ -269,6 +275,17 @@
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-01RKG7HC0F');</script>
+
+  <script>
+    if("serviceWorker" in navigator) {
+      navigator.serviceWorker.register('sw.js').then(registration => {
+        console.log(`Registered ${registration}`);
+      })
+      .catch(error => {
+        console.log(`Registration failed ${error}`)
+      })
+    }
+  </script>
 </body>
 
 </html>

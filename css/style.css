@@ -213,7 +213,7 @@
 
     @media (min-width:320px) {
       h1 {
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 600;
       }
 
@@ -229,7 +229,7 @@
 
     @media (min-width:481px) {
       h1 {
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 600;
       }
 
@@ -245,7 +245,7 @@
 
     @media (min-width:641px) {
       h1 {
-        font-size: 32px;
+        font-size: 26px;
       }
 
       h2 {
@@ -259,7 +259,7 @@
 
     @media (min-width:961px) {
       h1 {
-        font-size: 32px;
+        font-size: 26px;
       }
 
       h2 {
@@ -273,7 +273,7 @@
 
     @media (min-width:1025px) {
       h1 {
-        font-size: 32px;
+        font-size: 26px;
       }
 
       h2 {
@@ -287,7 +287,7 @@
 
     @media (min-width:1281px) {
       h1 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
       h2 {

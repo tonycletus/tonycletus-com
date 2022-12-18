@@ -293,6 +293,12 @@
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-01RKG7HC0F');</script>
+
+  <script>
+    if(navigator.serviceWorker) {
+      navigator.serviceWorker.register('../sw.js');
+    }
+  </script>
 </body>
 
 </html>
