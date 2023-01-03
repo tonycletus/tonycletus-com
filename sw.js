@@ -1,6 +1,6 @@
 self.addEventListener("install", e => {
     e.waitUntil(
-        caches.open("static")
+        caches.open("static3")
         .then(cache => {
             return cache.addAll([
                 './',

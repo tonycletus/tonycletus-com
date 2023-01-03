@@ -82,6 +82,15 @@
       align-items: center;
     }
 
+    .work-title {
+      color: var(--hyperlink);
+    }
+  
+    .work-desc {
+      text-align:left;
+      line-height: 26px;
+    }
+
     .line {
       width: 100px;
       margin: 0;
