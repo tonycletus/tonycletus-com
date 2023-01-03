@@ -1,6 +1,6 @@
 self.addEventListener("install", e => {
     e.waitUntil(
-        caches.open("static5")
+        caches.open("static6")
         .then(cache => {
             return cache.addAll([
                 './',
@@ -8,10 +8,7 @@ self.addEventListener("install", e => {
                 './posts/estam-digital-marketing.html',
                 './westsunset.html',
                 './css/style.css',
-                './boxicons/css/boxicons.min.css',
                 './img/logo.png'
-                
-
             ])
         })
     )
