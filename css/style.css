@@ -231,6 +231,11 @@
         font-weight: 600;
       }
 
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
       .line {
         width: 0px;
       }
@@ -247,6 +252,11 @@
         font-weight: 600;
       }
 
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
       .line {
         width: 0px;
       }
@@ -261,6 +271,10 @@
         font-size: 24px;
       }
 
+      h3 {
+        font-size: 20px;
+      }
+
       .line {
         width: 100px;
       }
@@ -273,6 +287,9 @@
 
       h2 {
         font-size: 24px;
+      }
+      h3 {
+        font-size: 20px;
       }
 
       .line {
@@ -289,6 +306,10 @@
         font-size: 24px;
       }
 
+      h3 {
+        font-size: 20px;
+      }
+
       .line {
         width: 100px;
       }
@@ -301,6 +322,10 @@
 
       h2 {
         font-size: 24px;
+      }
+
+      h3 {
+        font-size: 20px;
       }
 
       .line {
