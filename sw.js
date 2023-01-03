@@ -8,9 +8,7 @@ self.addEventListener("install", e => {
                 './posts/estam-digital-marketing.html',
                 './westsunset.html',
                 './css/style.css',
-                './boxicons/css/animations.css',
                 './boxicons/css/boxicons.min.css',
-                './boxicons/css/transformations.css',
                 './img/logo.png'
                 
 
