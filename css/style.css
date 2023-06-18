@@ -61,7 +61,7 @@
     .link:hover {
       color: var(--text-color);
     }
-
+  
     img {
       width: 25px;
       height: 25px;
@@ -92,7 +92,7 @@
     }
 
     .line {
-      width: 100px;
+      width: 250px;
       margin: 0;
       background-color:#000000;
     }
@@ -103,14 +103,20 @@
     }
 
     .container {
-      margin-left: 20px;
-      margin-right: 20px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
 
     .container-2 {
       margin-left: 20px;
       margin-right: 20px;
     }
+
+
+    .bio-content p {
+      white-space: pre-wrap;
+    }
+
 
     .mb-5 {
         margin-bottom: 5px;
@@ -276,7 +282,7 @@
       }
 
       .line {
-        width: 100px;
+        width: 250px;
       }
     }
 
@@ -293,7 +299,7 @@
       }
 
       .line {
-        width: 100px;
+        width: 250px;
       }
     }
 
@@ -311,7 +317,7 @@
       }
 
       .line {
-        width: 100px;
+        width: 250px;
       }
     }
 
@@ -329,7 +335,7 @@
       }
 
       .line {
-        width: 100px;
+        width: 250px;
       }
     }
 
