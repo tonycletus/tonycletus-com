@@ -335,7 +335,7 @@ header {
 
 
 footer {
-  color: #fff;
+  color: var(--hyperlink);
   text-align: center;
   padding: 5px 0;
   font-size: 16px;
