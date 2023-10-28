@@ -277,7 +277,7 @@ header {
 .skills {
   display: flex; 
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -288,8 +288,6 @@ header {
 .skills-other {
   display: flex; 
   flex-wrap: wrap;
-  justify-content: center; 
-  align-items: center;
   margin-bottom: 60px !important;
 }
 
@@ -519,6 +517,10 @@ footer {
 
   .skills {
     flex-wrap:nowrap;
+  }
+
+  .skills-other {
+    justify-content: center;
   }
   
   
