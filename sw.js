@@ -1,11 +1,21 @@
-const CACHE_NAME = "static-v4";
+const currentDate = new Date().toISOString().split('T')[0];
+const CACHE_NAME = `static-${currentDate}`;
+
 const urlsToCache = [
   './',
   './index.html',
   './posts/estam-digital-marketing.html',
   './westsunset.html',
   './css/style.css',
-  './img/logo.png'
+  './img/logo.png',
+  'https://fonts.googleapis.com/icon?family=Syne',
+  './img/portfolio1.png',
+  './img/portfolio2.png',
+  './img/portfolio3.png',
+  './img/portfolio4.png',
+  './img/portfolio6.png',
+  './img/portfolio7.png',
+  'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', // Cache the boxicons CSS
 ];
 
 self.addEventListener("install", event => {

@@ -23,187 +23,403 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="icon" href="img/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" media="print" onload="this.media='all'" /> <noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" /> </noscript>
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" media="print" onload="this.media='all'"> 
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap" media="print"
+    onload="this.media='all'" rel="stylesheet">
+
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne&display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" media="print"
+    onload="this.media='all'">
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="manifest" href="manifest.json">
+
 </head>
 
 <body>
   <div class="bigger">
     <div class="line"></div>
     <div class="container">
-      <div class="heading">
-        <img src="img/logo.png" alt="Tony Cletus" style="width:100%; max-width:32px; height:auto; border-radius: 100%; margin: 0; padding:0;"/>&nbsp; 
-        <h1>TONY CLETUS</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <a href="https://twitter.com/iamtonycletus">
-        <i class="topic-icon bx bxl-twitter bx-tada" style="animation-duration:10s"></i>
-        </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <a href="mailto:tc@tonycletus.com">tc@tonycletus.com</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <header>
+        <div style="display:flex; justify-content: space-between; align-items: center;">
+          <img src="img/logo.png" class="logo" alt="Tony Cletus"
+            style="width:100%; max-width:32px; height:auto; border-radius: 100%; margin: 0; padding:0; padding-right:10px;" />
+          <h1>Tony Cletus</h1>
+        </div>
+
+        <div style="display:flex; justify-content: space-between; align-items: center;">
+          <a href="https://twitter.com/iamtonycletus" style="margin-right:10px;">
+          </a>
+        </div>
+
+
+        <div class="theme-switcher">
+          <i class='bx bx-sun bx-spin'></i>
+          <select id="theme" class="theme-select">
+            <option value="auto">Auto</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+        
+
+      </header>
+      <hr style="color:#999;">
+
+      <section class="about">
         <div>
-          <i class='bx bx-sun bx-spin' style="animation-duration:5s"></i>&nbsp; 
-        <select id="theme">
-          <option value="auto">Auto</option>
-          <option value="dark">Dark</option>
-          <option value="light">Light</option>
-        </select>
+          <div class="segment-title">
+            <h2>What I do&nbsp;</h2><i class="topic-icon bx bx-user bx-burst-hover"></i>
+          </div>
+  
+          <div class="bio-content">
+            <p>I'm a versatile professional with expertise in <span>backend development</span>, <span>frontend development</span> and <span>UX design</span>. My approach is simple: I build fast, secure, and user-friendly web applications. With a background in working with African startups and over 7 years experience as a web developer, I've honed my skills and passion for innovation. Currently, I work as a freelancer while actively pursuing my own projects. Let's discuss potential collaborations—feel free to reach out via <a href="mailto:tc@tonycletus.com">email</a>.</p>
+          </div>
+  
+  
+          <ul class="social">
+            <li><a href="https://www.twitter.com/iamtonycletus"><i class="bx bxl-twitter bx-tada"
+                  style="animation-duration:10s"></i></a></li>
+            <li><a href="http://linkedin.com/in/tonycletus"><i class="bx bxl-linkedin bx-tada"
+                  style="animation-duration:10s"></i></a></li>
+            <li><a href="https://www.github.com/tonycletus"><i class="bx bxl-github bx-tada"
+                  style="animation-duration:10s"></i></a></li>
+            <li><a href="https://www.youtube.com/c/tonycletus"><i class="bx bxl-youtube bx-tada"
+                  style="animation-duration:10s"></i></a></li>
+          </ul>
         </div>
-      </div>
-      <p>Property of Tony Cletus (De Second). Awaiting his birth. <br>Currently managed by Tony Cletus (De first).</p>
-      <hr>
-      <div class="about">
-        <div class="segment-title">
-          <h2>What I do&nbsp;</h2><i class="topic-icon bx bx-user bx-burst-hover"></i>
-        </div>
-        <div class="bio-content">
-          <p>I am a versatile professional with expertise in full-stack web development, digital marketing, and content creation. Currently, I work as a freelancer and actively pursue my own side projects. </p>
-          <p>I have a rich background working with startups in Africa, which has honed my skills and passion for innovation. My previous experience is primarily working with startups in Africa. However, I am much more than that. If you'd like to discuss how we can collaborate, please don't hesitate to shoot me an <a href="mailto:tc@tonycletus.com">email</a>.</p>
-        </div>
-      </div>      
-      <div>
-        <div class="segment-title">
-          <h2>Social&nbsp;</h2><i class="topic-icon bx bx-chat bx-burst-hover"></i>
-        </div>
-        <ul>
-          <li><a href="https://www.twitter.com/iamtonycletus">Twitter</a></li>
-          <li><a href="http://linkedin.com/in/tonycletus">LinkedIn</a></li>
-          <li><a href="https://www.github.com/tonycletus">Github</a></li>
-          <li><a href="https://www.youtube.com/c/tonycletus">YouTube</a></li>
-          <li><a href="https://angel.co/tonycletus">AngelList</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="segment-title">
-          <h2>Work&nbsp;</h2><i class="topic-icon bx bx-laptop bx-burst-hover"></i>
-        </div>
-        <ul class="work-area">
-          <li><h3 class="work-title">Code To Create</h3></li>
-          <p class="work-desc"> 
-            I started Code To Create as a side project while in the University to teach coding online. <br>
-            I developed high-quality coding education materials, including online courses, workshops, and in-person training sessions. <br>
-            Built partnerships with schools, universities, and other organizations to expand the reach of CTC to increase our impact.</p>
+      </section>
 
-          <li><h3 class="work-title">Etrilabs and Happierco</h3></li>
-          <p class="work-desc">
-            From April 2019 to December 2021, I worked as a digital marketer at Etrilabs and Happierco startup.<br> 
-            I had the opportunity of handling a couple of roles such as Social Media Manager, Traffic Acquisition Manager, Content Marketing Manager, and finally Head of Marketing.</p>
 
-          <li><h3 class="work-title">Botamp and Iwaria</h3></li>
-          <p class="work-desc">
-            From March 2021 to June 2021, I had the opportunity to work remotely with two startups (Botamp and Iwaria) as a Marketing Manager.<br> 
-             My main task at Botamp was to help the intuitive website builder expand in the Anglophone countries.<br>
-              For Iwaira, a website for free and quality African stock photos, My focus was on getting more active contributors which eventually didn't materialize before my exit.</p>
-
-          <li><h3 class="work-title">Programmify</h3></li>
-          <p class="work-desc">I am currently building Programmify, a platform that recognizes great things built with code and the people behind them. <a href="https://Programmify.org">Visit Site</a>
-
-          <li><h3 class="work-title">Freelancer</h3></li>
-          <p class="work-desc">
-            From September 2021 till this moment, I've been working as a Freelancer. <br>
-            I consult and build full-stack websites and static websites for clients within and across Africa. <br>
-             I currently have 20+ happy clients and still counting.</p>
-        </ul>
-      </div>
-      <div>
+      <section>
         <div class="segment-title">
-          <h2>Project Ideas&nbsp;</h2><i class="topic-icon bx bx-brain bx-burst-hover"></i>
+          <h2>My Skills&nbsp;</h2><i class="topic-icon bx bx-code"></i>
         </div>
-        <ul>
-          <li>WhatsApp Jobs</li>
-          <li>Village Coders</li>
-          <li>Developer's Passport</li>
-          <li>Atomic Marketing</li>
-        </ul>
-      </div>
-      <div>
+        <p style="margin-top: -20px">Explore my skills in various areas of web development and design.</p>
+        <div class="skills">
+          <div class="card">
+            <h3 style="margin-bottom: 15px;">Frontend Development</h3>
+            <hr>
+            <ul>
+              <li style="background-color: #F7DF1E; color: #333;">JavaScript</li>
+              <li style="background-color: #007ACC; color: white;">TypeScript</li>
+              <li style="background-color: #563D7C; color: white;">Bootstrap 5</li>
+              <li style="background-color: #38B2AC; color: white;">Tailwind CSS</li>
+              <li style="background-color: #61DAFB; color: #333;">React</li>
+              <li style="background-color: #f7931e; color: #333;">Handlebars</li>
+              <li style="background-color: #CD6799; color: white;">SASS</li>
+              <li style="background-color: #319795; color: white;">Chakra UI</li>
+              <li style="background-color: #000000; color: white;">Next.js</li>
+              <li style="background-color: #FF3E00; color: white;">Svelte</li>
+            </ul>
+            
+          </div>
+      
+          <div class="card">
+            <h3 style="margin-bottom: 15px;">Backend Development</h3>
+            <hr>
+            <ul>
+              <li style="background-color: #777BB4; color: white;">PHP</li>
+              <li style="background-color: #FF2D20; color: white;">Laravel</li>
+              <li style="background-color: #01A0A4; color: white;">Livewire</li>
+              <li style="background-color: #68A063; color: white;">Node.js</li>
+              <li style="background-color: #28AE60; color: white;">Sails.js</li>
+              <li style="background-color: #000000; color: white;">Express</li>
+              <li style="background-color: #0C4B33; color: white;">Python Django</li>
+              <li style="background-color: #00618A; color: white;">MySQL</li>
+              <li style="background-color: #336791; color: white;">PostgreSQL</li>
+              <li style="background-color: #4DB33D; color: white;">MongoDB</li>
+              </ul>  
+            </ul>            
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="skills-other">
+          <div class="card">
+            <h3 style="margin-bottom: 15px;">Others</h3>
+            <hr>
+            <ul>
+               <li style="background-color: #E68A00; color: #333;">Design Systems</li>
+                <li style="background-color: #2088FF; color: white;">PWAs</li>
+                <li style="background-color: #D83A3A; color: white;">Performance Optimization</li>
+                <li style="background-color: #FFDD2E; color: #333;">Cpanel Management</li>
+                <li style="background-color: #24188B; color: white;">Accessibility auditing</li>
+                <li style="background-color: #69778D; color: #333;">Build Automation</li>
+                <li style="background-color: #00A1DE; color: white;">Responsive Web Design</li>
+                <li style="background-color: #FF5475; color: white;">UX Design/Strategy</li>
+                <li style="background-color: #0DB7ED; color: white;">Docker</li>
+                <li style="background-color: #F24E1E; color: white;">Figma</li>
+                <li style="background-color: #2f2d2d; color: white;">Git & GitHub</li>
+            </ul>            
+          </div>
+        </div>
+      </section>
+      
+
+      <section>
+        <div class="segment-title">
+          <h2>Top Portfolio Projects&nbsp;</h2><i class="topic-icon bx bx-brain bx-burst-hover"></i>
+        </div>
+         <p style="margin-top: -20px;">Explore some of my top portfolio projects that showcase my skills and expertise.</p>
+      
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="card">
+              <img src="img/portfolio1.png" alt="ESTAM University Project">
+              <div class="details">
+                <h3>ESTAM University School Management System</h3>
+              <p>Official website of ESTAM University featuring a comprehensive School Management System designed to streamline administrative tasks and enhance the student experience.</p>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>SASS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap 5</li>
+                <li>Handlebars</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MySQL</li>
+              </ul>
+              <a href="https://estamuni.net" class="card-link">Visit Site <i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="card">
+              <img src="img/portfolio2.png" alt="Heralds of Peace Project">
+              <div class="details">
+              <h3>Heralds of Peace NGO Website</h3>
+              <p>An NGO website designed for Heralds of Peace to accept donations, raise awareness for peace initiatives, and engage with supporters to further their mission.</p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap 3</li>
+                <li>jQuery</li>
+                <li>PHP 8</li>
+                <li>MySQL</li>
+              </ul>
+              <a href="https://heraldsofpeace.org" class="card-link">Visit Site <i class="bx bx-link-external"></i></a> 
+            </div>
+            </div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="card">
+              <img src="img/portfolio3.png" alt="Heralds Music Project">
+              <div class="details">
+              <h3>Heralds Music Website</h3>
+              <p>A music website equipped with an admin control panel to manage user submissions, artists, songs, and other musical content. Provides a platform for music enthusiasts and artists to explore and showcase their talents.</p>
+              <ul>
+                <li>HTML5</li>
+                <li>Bootstrap 5</li>
+                <li>JavaScript</li>
+                <li>PHP 8</li>
+                <li>jQuery</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <a href="https://heraldsmusic.padresteve.net" class=" card-link">Visit Site <i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="card">
+              <img src="img/portfolio4.png" alt="Wema Bank Project">
+              <div class="details">
+              <h3>Wema Bank: Account Reactivation</h3>
+              <p>ALAT for Business, a sophisticated financial management solution designed to simplify business operations and save valuable time. Empowered by Angular, Material UI, and TypeScript for enhanced user experience.</p>
+              <ul>
+                <li>Angular</li>
+                <li>Material UI</li>
+                <li>TypeScript</li>
+              </ul>
+              <a href="https://business.alat.ng/" class="card-link">Visit Site <i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="card">
+              <img src="img/portfolio6.png" alt="Padres Steve Official Site Project">
+              <div class="details">
+              <h3>Padres Steve Official Site</h3>
+              <p>Personal portfolio website for Fr. Steve Egwu, a Catholic priest and gospel artist. This site serves as a showcase for his work, experiences, and his devotion to spreading the message of faith and music.</p>
+              <ul>
+                <li>HTML</li>
+                <li>Bootstrap 3</li>
+                <li>jQuery</li>
+                <li>PHP 8</li>
+              </ul>
+              <a href="https://padresteve.net/" class="card-link">Visit Site <i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="card">
+              <img src="img/portfolio7.png" alt="FadaOchigbo Gospel Homilies' Vlog Project">
+              <div class="details">
+              <h3>FadaOchigbo Gospel Homilies' Vlog</h3>
+              <p>Discover and enjoy the latest Sunday and event homilies by Fr. Emmanuel Ochigbo on this WordPress-based vlog. It provides a platform for spiritual nourishment and reflection.</p>
+              <ul>
+                <li>WordPress</li>
+                <li>Elementor</li>
+              </ul>
+              <a href="https://fadaochigbo.com" class="card-link">Visit Site <i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="portfolio-btn">
+          <a id="prevBtn" onclick="plusSlides(-1)"><i class="bx bx-left-arrow-circle bx-fade-left"></i></a>
+          <a id="nextBtn" onclick="plusSlides(1)"><i class="bx bx-right-arrow-circle bx-fade-right"></i></a>
+        </div>
+      </section>      
+      
+
+
+      <section class="work">
+  <div class="segment-title">
+    <h2>Work Experience</h2><i class="topic-icon bx bx-laptop bx-burst-hover"></i>
+  </div>
+
+  <div class="work-area">
+    <div>
+      <h3 class="work-title">Code To Create</h3>
+      <p class="work-desc">
+        I founded Code To Create as a university side project to provide online coding education. <br>
+        I created high-quality coding courses, workshops, and in-person training materials. <br>
+        I also established partnerships with educational institutions to expand our reach and impact.</p>
+    </div>
+
+    <div>
+      <h3 class="work-title">Etrilabs and Happierco</h3>
+      <p class="work-desc">
+        I served as a digital marketer at Etrilabs and Happierco startups from April 2019 to December 2021. <br>
+        My roles included Social Media Manager, Traffic Acquisition Manager, Content Marketing Manager, and Head of Marketing.</p>
+    </div>
+
+    <div>
+      <h3 class="work-title">Botamp and Iwaria</h3>
+      <p class="work-desc">
+        From March 2021 to June 2021, I worked remotely as a Marketing Manager for two startups, Botamp and Iwaria. <br>
+        At Botamp, I focused on expanding the intuitive website builder's presence in Anglophone countries. <br>
+        At Iwaria, a platform for African stock photos, my goal was to attract more active contributors, though it wasn't realized during my tenure.</p>
+    </div>
+
+    <div>
+      <h3 class="work-title">Programmify</h3>
+      <p class="work-desc">
+        I'm currently developing Programmify, a platform that celebrates exceptional code-driven projects and their creators. <a href="https://Programmify.org">Visit Site</a></p>
+    </div>
+
+    <div>
+      <h3 class="work-title">Freelancer</h3>
+      <p class="work-desc">
+        Since September 2021, I've been freelancing, providing full-stack and static website development services to clients across Africa. <br>
+        I've had the pleasure of working with 20+ satisfied clients, with more to come.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+    <h3 style="margin: 35px 0;"> 
+      <i class="bx bxs-hand-right bx-fade-right"></i>&nbsp; &nbsp; &nbsp;
+      <a href="downloads/anthony-cletus-resume.pdf" style="text-decoration:underline !important;">Download My Résumé</a>
+    </h3>
+   
+</section>
+
+
+      <section>
         <div class="segment-title">
           <h2>Articles/Talks&nbsp;</h2><i class="topic-icon bx bx-pencil bx-burst-hover"></i>
         </div>
-        <ul>
-          <li class="mb-1"><a href="posts/estam-digital-marketing.html">Useful digitial marketing tools for your online business: A talk delivered at ESTAM University</a></li>
-          <li class="mb-1"><a href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7">Silicon Valley is not Just A Place, It is A State of Mind</a></li>
-          <li class="mb-1"><a href="https://tonycletus.hashnode.dev/15-websites-you-can-promote-your-product-as-an-indie-maker-ckp6j18d409wdmds1dnrobbru">15 websites you can promote your product as an indie maker</a></li>
-          <li class="mb-1"><a href="https://dev.to/tonycletus/the-outcomes-of-developers-embracing-no-code-2bpi">The outcomes of developers embracing No-code</a></li>
-          <li class="mb-1"><a href="https://dev.to/tonycletus/fuck-imposter-syndrome-2089">Fvck Imposter Syndrome!</a></li>
-          <li class="mb-1"><a href="https://www.linkedin.com/pulse/complete-company-guide-okrs-methodology-front-back-tony-cletus">The Complete Company Guide on OKRs Methodology – Front to Back</a></li>
-          <li class="mb-1"><a href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7">Silicon Valley is not Just A Place, It is A State of Mind</a></li>
-          <li class="mb-1"><a href="https://medium.com/tonycletus/the-effect-of-web-programming-on-scientific-innovation-a59108dda369">The Effect of Web Programming on Scientific Innovation</a></li>
-          <li class="mb-1"><a href="https://medium.com/tonycletus/how-to-become-a-self-taught-programmer-you-can-do-it-2bffea6615f">How To Become A Self-Taught Programmer — You Can Do It!</a></li>
-          <li class="mb-1"><a href="https://www.linkedin.com/pulse/steps-successfully-manage-your-goals-okrs-tony-cletus?trk=read_related_article-card_title">Steps To Successfully Manage Your Goals With OKRs</a></li>
-          <li class="mb-1"><a href="https://medium.com/happierco-blog/your-first-90-days-as-head-of-hr-374cd4bad136">Your First 90 Days as Head of HR​</a></li>
-          <li class="mb-1"><a href="https://www.linkedin.com/pulse/how-engage-your-team-overcome-company-challenges-tony-cletus/">How To Engage Your Team and Overcome Your Company Challenges</a></li>
-          <li class="mb-1"><a href="https://medium.com/happierco-blog/errors-to-avoid-in-okrs-9c3f68922857">Errors To Avoid in OKRs?</a></li>
-          <li class="mb-1"><a href="https://medium.com/happierco-blog/steps-for-running-a-productive-and-successful-startup-7271985c735b">Steps for running a productive and successful startup</a></li>
-          <li class="mb-1"><a href="https://medium.com/tonycletus/the-truth-about-gender-gap-in-the-tech-field-a-call-to-extirpate-this-stereotype-5810023545fe">The Truth About Gender Gap In The Tech Field: A Call To Extirpate This Stereotype.</a></li>
-          <li class="mb-1"><a href="https://medium.com/tonycletus/an-insight-into-the-domain-of-computer-programming-and-its-relevance-importance-to-the-world-of-40d0a45c127c">An Insight Into the Domain of Computer Programming and It's Importance to the World of Technology</a></li>
-    
-        </ul>
-      </div>
-     
+      
+        <article>
+          <!-- <p class="mb-1"><i class="bx bx-pen"></i> <a href="posts/estam-digital-marketing.html">Useful digital marketing tools for your online business: A talk delivered at ESTAM University</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7">Silicon Valley is not Just A Place, It is A State of Mind</a></p> -->
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://tonycletus.hashnode.dev/15-websites-you-can-promote-your-product-as-an-indie-maker-ckp6j18d409wdmds1dnrobbru">15 websites you can promote your product as an indie maker</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://dev.to/tonycletus/the-outcomes-of-developers-embracing-no-code-2bpi">The outcomes of developers embracing No-code</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://dev.to/tonycletus/fvck-imposter-syndrome-2089">Fvck Imposter Syndrome!</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://www.linkedin.com/pulse/complete-company-guide-okrs-methodology-front-back-tony-cletus">The Complete Company Guide on OKRs Methodology – Front to Back</a></p>
+          <!-- <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7">Silicon Valley is not Just A Place, It is A State of Mind</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://medium.com/tonycletus/the-effect-of-web-programming-on-scientific-innovation-a59108dda369">The Effect of Web Programming on Scientific Innovation</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://medium.com/tonycletus/how-to-become-a-self-taught-programmer-you-can-do-it-2bffea6615f">How To Become A Self-Taught Programmer — You Can Do It!</a></p> -->
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://www.linkedin.com/pulse/steps-to-successfully-manage-your-goals-okrs-tony-cletus?trk=read_related_article-card_title">Steps To Successfully Manage Your Goals With OKRs</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://www.linkedin.com/pulse/how-to-engage-your-team-overcome-company-challenges-tony-cletus/">How To Engage Your Team and Overcome Your Company Challenges</a></p>
+          <!-- <p class "mb-1"><i class="bx bx-pen"></i> <a href="https://medium.com/tonycletus/the-truth-about-gender-gap-in-the-tech-field-a-call-to-extirpate-this-stereotype-5810023545fe">The Truth About Gender Gap In The Tech Field: A Call To Extirpate This Stereotype.</a></p>
+          <p class="mb-1"><i class="bx bx-pen"></i> <a href="https://medium.com/tonycletus/an-insight-into-the-domain-of-computer-programming-and-its-relevance-importance-to-the-world-of-40d0a45c127c">An Insight Into the Domain of Computer Programming and Its Importance to the World of Technology</a></p> -->
+        </article>
+      </section>
+      
       <br><br><br>
-    
+
       <!-- Footer -->
-    <div class="sib-form">
-      <div id="sib-form-container" class="sib-form-container">
-        <div id="subscribers" class="sib-container--medium sib-container--vertical"
-          style="background-color:var(--background-color); margin-top:-50px;max-width:350px; border-width:0px; border-color:#C0CCD9; border-style:solid;">
-          <form name="Subscribers" action="/#subscribers" method="POST" id="my_form" data-netlify="true">
-            
-            <!-- Title -->
-            <div style="padding: 4px 0;">
-              <div class="sib-form-block"
-                style="font-size:18px; font-weight: 600; text-align:left; font-family:&quot;Poppins&quot;, sans-serif; color:#37352F; background-color:var(--background-color);">
-                <p style="color: var(--text-color);">Get updates:</p>
+      <section class="sib-form">
+        <div id="sib-form-container" class="sib-form-container">
+          <div id="subscribers" class="sib-container--medium sib-container--vertical"
+            style="background-color:var(--background-color); margin-top:-50px;max-width:350px; border-width:0px; border-color:#C0CCD9; border-style:solid;">
+            <form name="Subscribers" action="/#subscribers" method="POST" id="my_form" data-netlify="true">
+
+              <!-- Title -->
+              <div style="padding: 4px 0;">
+                <div class="sib-form-block"
+                  style="font-size:18px; font-weight: 600; text-align:left; font-family: 'Syne', sans-serif; color:#37352F; background-color:var(--background-color);">
+                  <p style="color: var(--text-color);">Get updates:</p>
+                </div>
               </div>
-            </div>
 
               <!-- Email Input -->
-            <div style="padding: 4px 0;">
-              <div class="sib-input sib-form-block">
-                <div class="form__entry entry_block">
-                  <div class="form__label-row ">
-                    <div class="entry__field"> 
-                      <input class="input" id="email" type="email" name="email" 
-                        autocomplete="off" placeholder="Your email address"
-                        style="font-family:&quot;Poppins&quot;, sans-serif; font-size: 16px; background-color: var(--background-color); color: var(--text-color);" data-required="true"
-                        required />
+              <div style="padding: 4px 0;">
+                <div class="sib-input sib-form-block">
+                  <div class="form__entry entry_block">
+                    <div class="form__label-row ">
+                      <div class="entry__field">
+                        <input class="input" id="email" type="email" name="email" autocomplete="off"
+                          placeholder="Your email address"
+                          style="font-family: 'Syne', sans-serif; font-size: 16px; background-color: var(--background-color); color: var(--text-color);"
+                          data-required="true" required />
                       </div>
-                  </div> 
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
               <!-- Submit Button -->
-            <div style="padding: 4px 0;">
-              <div class="sib-form-block" style="text-align: left"> 
-                <button
-                  class="sib-form-block__button sib-form-block__button-with-loader sib-submit-btn" type="submit">
-                   <svg
-                    class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                    <path
-                      d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-                  </svg> Subscribe 
-                </button>
+              <div style="padding: 4px 0;">
+                <div class="sib-form-block" style="text-align: left">
+                  <button class="sib-form-block__button sib-form-block__button-with-loader sib-submit-btn"
+                    type="submit">
+                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                    </svg> Subscribe <i class="bx bx-bell"></i>
+                  </button>
                 </div>
-            </div>
+              </div>
 
-            <input type="text" name="email_address_check" value="" class="input--hidden"> 
-            <input type="hidden" name="locale" value="en">
-          </form>
+              <input type="text" name="email_address_check" value="" class="input--hidden">
+              <input type="hidden" name="locale" value="en">
+            </form>
+          </div>
         </div>
-      </div>
-    </div>
-    
-      
+      </section>
       <footer>
-        <p>Built with love. </span> TonyCletus ©<span id="current_year"></span></p>
+        <p>Built with <span class="love-icon"><i class="bx bx-heart"></i></span> by TonyCletus &copy; <span id="current_year"></span></p>
       </footer>
     </div>
   </div>
+  
   <script>
     window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code'; window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again."; window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. "; window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again."; window.translation = { common: { selectedList: '{quantity} list selected', selectedLists: '{quantity} lists selected' } }; var AUTOHIDE = Boolean(0);
 
@@ -211,81 +427,113 @@
       document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
       document.body.classList.add(`theme-${theme}`);
     }
-    
+
     document.addEventListener("DOMContentLoaded", () => {
       const savedTheme = localStorage.getItem("theme") || "dark";
 
       applyTheme(savedTheme);
 
-    for (const optionElement of document.querySelectorAll("#theme option")) {
+      for (const optionElement of document.querySelectorAll("#theme option")) {
         optionElement.selected = savedTheme === optionElement.value;
-    }
+      }
 
-    document.querySelector("#theme").addEventListener("change", function () {
-      localStorage.setItem("theme", this.value);
+      document.querySelector("#theme").addEventListener("change", function () {
+        localStorage.setItem("theme", this.value);
         applyTheme(this.value);
       });
     });
 
-     // Display current year
-     let displayYear = document.getElementById("current_year");
-    let currentYear =  new Date().getFullYear();
+    // Display current year
+    let displayYear = document.getElementById("current_year");
+    let currentYear = new Date().getFullYear();
     displayYear.innerHTML = currentYear;
 
     // Submit form with AJAX
     let sendForm = document.querySelector("#subscribers form");
-      
-      sendForm.addEventListener('submit', e => {
-        e.preventDefault();
 
-        const formData = new FormData(sendForm);
-        fetch(sendForm.getAttribute('action'), {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-          },
-          body: new URLSearchParams(formData).toString()
-        })
+    sendForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const formData = new FormData(sendForm);
+      fetch(sendForm.getAttribute('action'), {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: new URLSearchParams(formData).toString()
+      })
         .then(res => {
           if (res) {
             Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Thank you for your submission!',
-            showConfirmButton: false,
-            timer: 2000
-          })
-          document.getElementById('email').value = "";
+              position: 'top-end',
+              icon: 'success',
+              title: 'Thank you for your submission!',
+              showConfirmButton: false,
+              timer: 2000
+            })
+            document.getElementById('email').value = "";
 
           } else {
             Swal.fire({
-            position: 'top-end',
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Failed! Please check your internet connection',
-            showConfirmButton: false,
-            timer: 2000
-          })
-          document.getElementById('email').value = "";
-            
+              position: 'top-end',
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Failed! Please check your internet connection',
+              showConfirmButton: false,
+              timer: 2000
+            })
+            document.getElementById('email').value = "";
+
           }
         });
-      });
+    });
 
   </script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+  
+  <script>
+    let slideIndex = 1;
+    
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("mySlides");
+    
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+    
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+    
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+    
+        slides[slideIndex - 1].style.display = "block";
+    }
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    // Initially hide all slides except the first one
+    showSlides(slideIndex);
+    
+      </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-01RKG7HC0F"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-01RKG7HC0F');</script>
 
+
   <script>
-    if("serviceWorker" in navigator) {
+    if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register('sw.js').then(registration => {
         console.log(`Registered ${registration}`);
       })
-      .catch(error => {
-        console.log(`Registration failed ${error}`)
-      })
+        .catch(error => {
+          console.log(`Registration failed ${error}`)
+        })
     }
   </script>
 </body>

@@ -1,420 +1,678 @@
-    html {
-      font-size: 16px;
-    }
+html {
+  font-size: 16px;
+}
 
-    .mobile-screen {
-      display: none;
-    }
+.mobile-screen {
+  display: none;
+}
 
-    .large-screen {
-      display: block;
-    }
+.large-screen {
+  display: block;
+}
 
-    body {
-      --text-color: #37352F;
-      --background-color: #ffffff;
-      --hyperlink: #000000;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      border: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+body {
+  --text-color: #37352F;
+  --background-color: #ffffff;
+  --hyperlink: #000000;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Syne', sans-serif;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /** Dark, Light and Auto Mode **/
-    :root {
-      --dark-background-color: #161616;
-      --dark-text-color: #eeeeee;
-      --dark-hyperlink: #f0f2a1;
-    }
+/** Dark, Light and Auto Mode **/
+:root {
+  --dark-background-color: #161616;
+  --dark-text-color: #eeeeee;
+  --dark-hyperlink: #f0f2a1;
+}
 
-    body.theme-dark {
-      --background-color: var(--dark-background-color);
-      --text-color: var(--dark-text-color);
-      --hyperlink: var(--dark-hyperlink);
-      
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body.theme-auto {
-        --background-color: var(--dark-background-color);
-        --text-color: var(--dark-text-color);
-        --hyperlink: var(--dark-hyperlink);
-      }
-    } 
-
-    a {
-      color: var(--hyperlink);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--text-color);
-    }
-
-    .link {
-      color: var(--hyperlink);
-    }
-
-    .link:hover {
-      color: var(--text-color);
-    }
+body.theme-dark {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+  --hyperlink: var(--dark-hyperlink);
   
-    img {
-      width: 25px;
-      height: 25px;
-    }
+}
 
-    .topic-icon{
-      font-size: 28px;
-    }
+@media (prefers-color-scheme: dark) {
+  body.theme-auto {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+    --hyperlink: var(--dark-hyperlink);
+  }
+} 
 
-    .heading {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+a {
+  color: var(--hyperlink);
+  text-decoration: none;
+}
 
-    .segment-title {
-      display: flex;
-      align-items: center;
-    }
+a:hover {
+  color: var(--text-color);
+}
 
-    .work-title {
-      color: var(--hyperlink);
-    }
+.link {
+  color: var(--hyperlink);
+}
+
+.link:hover {
+  color: var(--text-color);
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+}
+
+.topic-icon{
+  font-size: 28px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0;
+  width: 200px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a i{
+  font-size: 24px;
+}
+
+.segment-title {
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+  padding-bottom: 5px;
+}
+
+.work-title {
+  color: var(--hyperlink);
+}
+
+.work-desc {
+  text-align:left;
+  line-height: 26px;
+}
+
+.line {
+  width: 250px;
+  margin: 0;
+  background-color:#000000;
+}
+
+.bigger {
+  display: flex;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container-2 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.bio-content p {
+  white-space: pre-wrap;
+}
+
+.bio-content span {
+  font-weight: 600;
+  color: var(--hyperlink);
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-select {
+  background: none;
+  border: none;
+  color: #54524c; 
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s;
+}
+
+.theme-select:focus {
+  color: #54524c; 
+}
+
+.bx-sun {
+  font-size: 24px; 
+  margin-right: 10px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: inline-block;
+  white-space: normal;
+}
+
+.card img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #f2f2f2;
+  color: #555;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+}
+
+.card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 15px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  padding: 10px 30px;
+}
+
+.card-link:hover {
+  background-color: var(--dark-hyperlink);
+  color: #000;
+
+}
+
+.portfolio-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+}
+
+.portfolio-btn i {
+  font-size: 40px;
+}
+
+/**Skills section**/
+
+.skills {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.skills .card {
+  margin-top: 15px;
+}
+
+.skills-other {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 60px !important;
+}
+
+.skills-other .card {
+  margin-top: 15px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.sib-form {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
+  max-width: 400px;
+
+}
+
+
+.sib-submit-btn {
+  font-size: 18px; 
+  text-align: left; 
+  font-weight: 600; 
+  font-family: 'Syne', sans-serif;
+  background-color: var(--dark-text-color);
+  border-radius: 3px; 
+  border-width: 0px;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.sib-submit-btn:hover {
+  background-color: var(--dark-hyperlink);
+}
+
+
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 16px;
+  margin-top: 32px;;
+}
+
+.love-icon {
+  color: #F14E32; /* Heart icon color */
+}
+
+
+/**
+  WEST SUNSET NFT
+**/
+
+.banner {
+  width: 100%;
+  max-width: 926px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.nft-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.nft-contact {
+  max-width: 926px;
+  height: auto;
+  border-radius: 5px;
+  background:rgba(55, 53, 47, 0.4);
+  color: var(--text-color);
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.nft-container {
+  max-width: 926px;
+  height: auto;
+  border-radius: 5px;
+  background:rgba(55, 53, 47, 0.4);
+  margin: 0;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.verified {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4px 0;
+}
+
+.v-link, .v-text {
+  padding: 4px;
+}
+
+.v-link {
+  color:  #f0f2a1;
+}
+
+.v-text {
+  color: var(--text-color);
+}
+
+.v-link:hover, .v-text:hover {
+  color: #ffffff;
+}
+
+.cta {
+  padding: 15px;
+  max-width: 926px;
+  height: auto;
+  text-align: center;
+}
+
+.cta-btn {
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+}
+
+
+.cta-btn a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+.cta-btn:hover {
+  background: var(--hyperlink);
+
+}
+
+@media (min-width:320px) {
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 35px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  .line {
+    width: 0px;
+  }
+}
+
+@media (min-width:481px) {
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  .line {
+    width: 0px;
+  }
+}
+
+@media (min-width:961px) {
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  section{
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 35px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+  .line {
+    width: 250px;
+  }
+
+  .skills {
+    flex-wrap:nowrap;
+  }
   
-    .work-desc {
-      text-align:left;
-      line-height: 26px;
-    }
-
-    .line {
-      width: 250px;
-      margin: 0;
-      background-color:#000000;
-    }
-
-    .bigger {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-
-    .container {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
-    .container-2 {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-
-    .bio-content p {
-      white-space: pre-wrap;
-    }
-
-
-    .mb-5 {
-        margin-bottom: 5px;
-        margin-top: 20px;
-    }
-
-    .mb-1 {
-      margin-bottom: 8px;
-    }
-
-    .sib-submit-btn {
-      font-size: 18px; 
-      text-align: left; 
-      font-weight: 600; 
-      font-family: 'Poppins', sans-serif; 
-      color: var(--background-color); 
-      background-color: var(--text-color) ;
-      border-radius: 3px; 
-      border-width: 0px;
-    }
-
-    /**
-      WEST SUNSET NFT
-    **/
-
-    .banner {
-      width: 100%;
-      max-width: 926px;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .nft-img {
-      width: 100%;
-      max-width: 280px;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .nft-contact {
-      max-width: 926px;
-      height: auto;
-      border-radius: 5px;
-      background:rgba(55, 53, 47, 0.4);
-      color: var(--text-color);
-      padding: 8px;
-      margin: 8px 0;
-    }
-
-    .nft-container {
-      max-width: 926px;
-      height: auto;
-      border-radius: 5px;
-      background:rgba(55, 53, 47, 0.4);
-      margin: 0;
-      padding: 8px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .verified {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 4px 0;
-    }
-
-    .v-link, .v-text {
-      padding: 4px;
-    }
-
-    .v-link {
-      color:  #f0f2a1;
-    }
-
-    .v-text {
-      color: var(--text-color);
-    }
-
-    .v-link:hover, .v-text:hover {
-      color: #ffffff;
-    }
-
-    .cta {
-      padding: 15px;
-      max-width: 926px;
-      height: auto;
-      text-align: center;
-    }
-
-    .cta-btn {
-      padding: 18px 20px;
-      text-align: center;
-      font-size: 20px;
-      background-color: var(--text-color);
-      border: none;
-      border-radius: 5px;
-    }
-
-
-    .cta-btn a {
-      text-decoration: none;
-      color: var(--background-color);
-    }
-
-    .cta-btn:hover {
-      background: var(--hyperlink);
-    
-    }
-
-    @media (min-width:320px) {
-      h1 {
-        font-size: 22px;
-        font-weight: 600;
-      }
-
-      h2 {
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      h3 {
-        font-size: 18px;
-        font-weight: 500;
-      }
-
-      .line {
-        width: 0px;
-      }
-    }
-
-    @media (min-width:481px) {
-      h1 {
-        font-size: 22px;
-        font-weight: 600;
-      }
-
-      h2 {
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      h3 {
-        font-size: 18px;
-        font-weight: 500;
-      }
-
-      .line {
-        width: 0px;
-      }
-    }
-
-    @media (min-width:641px) {
-      h1 {
-        font-size: 26px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-
-      .line {
-        width: 250px;
-      }
-    }
-
-    @media (min-width:961px) {
-      h1 {
-        font-size: 26px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-      h3 {
-        font-size: 20px;
-      }
-
-      .line {
-        width: 250px;
-      }
-    }
-
-    @media (min-width:1025px) {
-      h1 {
-        font-size: 26px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-
-      .line {
-        width: 250px;
-      }
-    }
-
-    @media (min-width:1281px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-
-      .line {
-        width: 250px;
-      }
-    }
-
-    @media only screen and (max-width: 768px) {
-      /* For mobile phones: */
-
-      .mobile-screen {
-        display: block;
-      }
-
-      .mySlides {
-        display:none;
-      }
-
-      .img-mobile {
-        width: 100%;
-        max-width: 280px;
-        height: auto;
-        border-radius: 5px;
-      }
-    
-      .large-screen {
-        display: none;
-
-      }
-
-      .nft-img {
-        width: none;
-        max-width: 250px;
-      }
   
-      .nft-contact {
-        max-width: 400px;
-        height: auto;
-        border-radius: 5px;
-        background:rgba(55, 53, 47, 0.4);
-        color: var(--text-color);
-        padding: 8px;
-        margin: 8px 0;
-      }
-  
-      .nft-container {
-        max-width: 400px;
-        height: auto;
-        border-radius: 5px;
-        background:rgba(55, 53, 47, 0.4);
-        margin: 0;
-        padding: 8px;
-        display: flex;
-        flex-wrap: wrap;
-      }
-  
-      .verified {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 4px 0;
-      }
+  .slideshow-container .card {
+    width: 100%;
+    max-width: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      .container-2 {
-        margin-left: 0px;
-        margin-right: 0px;
-        width:100%;
-        max-width: 400px;
-      }
+  }
 
-      .bigger-2{
-        padding: 0 1rem;
-      }
-
-      .squeeze {
-        font-size:12px;
-        font-weight:500;
-      }
-      .cta-btn {
-        padding: 12px 14px;
-        font-size: 18px;
-      }
+  .slideshow-container .details {
+    max-width: 100%;
+    max-height: 350px; 
+    height: auto;
+    width: 370px; 
   }
 
 
+  .slideshow-container  .card img {
+    max-width: 100%;
+    max-height: 350px; 
+    height: auto;
+    width: 370px; 
+    margin-right: 30px;
+  }
 
-    
+  .slideshow-container .card-link {
+    margin-top: 30px;
+
+  }
+  
+  .portfolio-btn {
+    max-width: 740px;
+  }
+
+  .segment-title {
+
+  }
+  
+}
+
+@media (min-width:1025px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .line {
+    width: 250px;
+  }
+}
+
+@media (min-width:1281px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .line {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .mobile-screen {
+    display: block;
+  }
+
+  .mySlides {
+    display:none;
+  }
+
+  .img-mobile {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .large-screen {
+    display: none;
+
+  }
+
+  .nft-img {
+    width: none;
+    max-width: 250px;
+  }
+
+  .nft-contact {
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    background:rgba(55, 53, 47, 0.4);
+    color: var(--text-color);
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  .nft-container {
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    background:rgba(55, 53, 47, 0.4);
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .verified {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4px 0;
+  }
+
+  .container-2 {
+    margin-left: 0px;
+    margin-right: 0px;
+    width:100%;
+    max-width: 400px;
+  }
+
+  .bigger-2{
+    padding: 0 1rem;
+  }
+
+  .squeeze {
+    font-size:12px;
+    font-weight:500;
+  }
+  .cta-btn {
+    padding: 12px 14px;
+    font-size: 18px;
+  }
+}
+
+
+
