@@ -564,6 +564,44 @@ footer {
   
 }
 
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  color: white;
+  margin-left: 10px;
+}
+
+.current-badge {
+  background-color: #4CAF50; /* Green for current */
+}
+
+.past-badge {
+  background-color: #999; /* Gray for past */
+}
+
+.work-area {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.work-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.work-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
 @media (min-width:1025px) {
   h1 {
     font-size: 26px;
