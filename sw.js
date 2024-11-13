@@ -1,5 +1,6 @@
-const currentDate = new Date().toISOString().split('T')[0];
-const CACHE_NAME = `static-${currentDate}`;
+// Use a version number for the cache name to control updates
+const CACHE_VERSION = 'v1.0.0'; // Increment this version whenever you make changes
+const CACHE_NAME = `static-${CACHE_VERSION}`;
 
 const urlsToCache = [
   './',

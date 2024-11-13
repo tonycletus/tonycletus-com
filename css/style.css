@@ -560,42 +560,106 @@ footer {
   
 }
 
+/* Section title styling */
+.segment-title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--hyperlink);
+  margin-bottom: 20px;
+}
+
+.topic-icon {
+  margin-left: 10px;
+  color: var(--hyperlink);
+}
+
+/* Work area styling */
+.work-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Transparent card styling */
+.work-item {
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px); 
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling for company name and badge */
+.work-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-name {
+  font-weight: 700;
+  color: var(--hyperlink);
+  font-size: 18px;
+}
+
+/* Status badge styling */
 .status-badge {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 4px 10px;
   font-size: 12px;
   font-weight: 600;
-  border-radius: 12px;
-  color: white;
-  margin-left: 10px;
+  border-radius: 20px;
+  color: #fff;
 }
 
 .current-badge {
-  background-color: #4CAF50; 
+  background-color: #4CAF50;
 }
 
 .past-badge {
   background-color: #999;
 }
 
-.work-area {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* Role title on separate line */
+.role-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a3a3a3;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-style: italic;
 }
 
-.work-item {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+/* Description styling */
+.work-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-top: 10px;
 }
 
-.work-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .work-item {
+    padding: 15px;
+  }
 
+  .company-name {
+    font-size: 16px;
+  }
+
+  .work-desc {
+    font-size: 14px;
+  }
+}
 
 
 @media (min-width:1025px) {
