@@ -46,12 +46,12 @@ body.theme-dark {
 } 
 
 a {
-  color: var(--hyperlink);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--text-color);
+  color: var(--hyperlink);
 }
 
 .link {
