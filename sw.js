@@ -1,5 +1,5 @@
 // Use a version number for the cache name to control updates
-const CACHE_VERSION = 'v1.1.3'; // Increment this version whenever you make changes
+const CACHE_VERSION = 'v2.2.2'; // Increment this version whenever you make changes
 const CACHE_NAME = `static-${CACHE_VERSION}`;
 
 const urlsToCache = [
