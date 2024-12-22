@@ -1,5 +1,4 @@
-// Use a version number for the cache name to control updates
-const CACHE_VERSION = 'v3.3.3'; // Increment this version whenever you make changes
+const CACHE_VERSION = 'v3.3.3'; 
 const CACHE_NAME = `static-${CACHE_VERSION}`;
 
 const urlsToCache = [
@@ -16,7 +15,7 @@ const urlsToCache = [
   './img/portfolio4.png',
   './img/portfolio6.jpeg',
   './img/portfolio7.png',
-  'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', // Cache the boxicons CSS
+  'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
 ];
 
 self.addEventListener("install", event => {
