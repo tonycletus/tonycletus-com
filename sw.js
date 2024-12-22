@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v3.3.3'; 
+const CACHE_VERSION = 'v2.4.3'; 
 const CACHE_NAME = `static-${CACHE_VERSION}`;
 
 const urlsToCache = [
