@@ -1,27 +1,19 @@
 [build]
-  # Publish the src directory (where your index.html is located)
   publish = "src"
-  
-  # No build command needed for static HTML
-  command = ""
 
-# Specify Node.js version for compatibility
 [build.environment]
   NODE_VERSION = "18.19.0"
 
-# Redirect rules for clean URLs
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Form submission redirects
 [[redirects]]
   from = "/success"
   to = "/index.html?subscribed=true"
   status = 200
 
-# Headers for better performance and security
 [[headers]]
   for = "/*"
   [headers.values]
@@ -30,7 +22,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache static assets
 [[headers]]
   for = "/css/*"
   [headers.values]
