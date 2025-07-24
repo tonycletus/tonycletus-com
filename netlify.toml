@@ -5,6 +5,10 @@
   # No build command needed for static HTML
   command = ""
 
+# Specify Node.js version for compatibility
+[build.environment]
+  NODE_VERSION = "18.19.0"
+
 # Redirect rules for clean URLs
 [[redirects]]
   from = "/*"
