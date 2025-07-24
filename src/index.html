@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tony Cletus - Full-Stack Developer & Product Manager</title>
+  <meta name="description" content="Tony Cletus - Full-stack developer, digital marketer, and product manager with 5+ years of experience crafting innovative solutions." />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  
+  <!-- Open Graph Protocol -->
+  <meta property="og:url" content="https://tonycletus.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tony Cletus - Full-Stack Developer & Product Manager" />
+  <meta property="og:description" content="Explore the portfolio of Tony Cletus, a seasoned software developer with 5+ years of expertise in full-stack development, digital marketing, and product management." />
+  <meta property="og:image" content="https://tonycletus.com/public/img/logo.png" />
+  <meta property="og:image:alt" content="Tony Cletus - Full-Stack Developer & Product Manager" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Tony Cletus - Portfolio" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@iamtonycletus" />
+  <meta name="twitter:creator" content="@iamtonycletus" />
+  <meta name="twitter:title" content="Tony Cletus - Full-Stack Developer & Product Manager" />
+  <meta name="twitter:description" content="Explore the portfolio of Tony Cletus, a seasoned software developer with 5+ years of expertise." />
+  <meta name="twitter:image" content="https://tonycletus.com/public/img/logo.png" />
+  <meta name="twitter:image:alt" content="Tony Cletus - Full-Stack Developer & Product Manager" />
+  
+  <!-- Theme and Icons -->
+  <meta name="theme-color" content="#f0f2a1" />
+  <meta name="msapplication-TileColor" content="#f0f2a1" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../public/img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../public/img/logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../public/img/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../public/img/logo.png" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="../public/manifest.json">
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+    <div class="progress-text" id="progress-text">0%</div>
+  </div>
+
+  <!-- Custom Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+  
+  <!-- Main Content -->
+  <div class="app-container">
+    <div class="decorative-line"></div>
+    
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-brand">
+          <img src="../public/img/logo.png" class="brand-logo" alt="Tony Cletus Logo" />
+          <h1 class="brand-name">Tony Cletus</h1>
+        </div>
+
+        <div class="header-actions">
+          <div class="theme-switcher">
+            <i class='bx bx-sun theme-icon'></i>
+            <select id="theme-selector" class="theme-select" aria-label="Select theme">
+              <option value="auto">Auto</option>
+              <option value="dark" selected>Dark</option>
+              <option value="light">Light</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <hr class="divider">
+
+      <!-- About Section -->
+      <section class="section about-section">
+        <div class="section-header">
+          <h2 class="section-title">What I Do</h2>
+          <i class="section-icon bx bx-user"></i>
+        </div>
+
+        <div class="bio-content">
+          <p class="bio-text">
+            <strong>Anthony Omojo Cletus</strong> is a Nigerian engineer, educator, and AI researcher with nearly a decade building and teaching software that empowers people. My work focuses on <span class="highlight">privacy</span>, <span class="highlight">accessibility</span>, and <span class="highlight">inclusive infrastructure</span>, especially for communities with limited internet and digital protection.
+          </p>
+          <p class="bio-text" style="margin-top: 1rem;">
+            I am the Cofounder of <strong>Programmify</strong>, the co-creator of <strong>Tendly</strong>, and the lead architect of <strong>AANI</strong>, an offline-first AI assistant designed for the Next Billion. I combine technical depth with strong product strategy, growth experience, and a commitment to ethical AI. I have taught at universities, led innovation teams, and received the <strong>United Nations Eminent Award for Peace and Reconciliation</strong>.
+          </p>
+          <p class="bio-text" style="margin-top: 1rem;">
+            Let's discuss collaborations! Feel free to <a href="mailto:tc@tonycletus.com" class="link-email">✉ contact me</a>.
+          </p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.twitter.com/iamtonycletus" class="social-link" aria-label="Twitter">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="http://linkedin.com/in/tonycletus" class="social-link" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://www.github.com/tonycletus" class="social-link" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.youtube.com/c/tonycletus" class="social-link" aria-label="YouTube">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- CV Download Section -->
+      <section class="section cv-section">
+        <div class="section-header">
+          <h2 class="section-title">Resume & CV</h2>
+          <i class="section-icon bx bx-download"></i>
+        </div>
+        
+        <div class="cv-container">
+          <div class="cv-card">
+            <div class="cv-content">
+              <h3 class="cv-title">Anthony Omojo Cletus</h3>
+              <p class="cv-description">
+                Full-Stack Developer, Digital Marketer & Product Manager with 5+ years of experience 
+                in web development, startup growth, and innovative product solutions.
+              </p>
+              <div class="cv-stats">
+                <div class="cv-stat">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="cv-stat">
+                  <span class="stat-number">UN Award</span>
+                  <span class="stat-label">Peace & Reconciliation</span>
+                </div>
+                <div class="cv-stat">
+                  <span class="stat-number">MSc</span>
+                  <span class="stat-label">Computer Science</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-actions">
+              <a href="../public/downloads/anthony-cletus-resume.pdf" 
+                 class="cv-button cv-button-primary" 
+                 target="_blank" 
+                 rel="noopener">
+                <i class="bx bx-file-pdf"></i>
+                View CV
+              </a>
+              <a href="../public/downloads/anthony-cletus-resume.pdf" 
+                 class="cv-button cv-button-secondary" 
+                 download="Anthony-Cletus-Resume.pdf">
+                <i class="bx bx-download"></i>
+                Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills-section">
+        <div class="section-header">
+          <h2 class="section-title">My Skills</h2>
+          <i class="section-icon bx bx-code"></i>
+        </div>
+        
+        <p class="section-subtitle">Explore my skills in various areas of web development and design.</p>
+        
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="skill-title">Frontend Development</h3>
+            <hr class="skill-divider">
+            <div class="skill-tags">
+              <span class="skill-tag" style="background-color: #F7DF1E; color: #333;">JavaScript</span>
+              <span class="skill-tag" style="background-color: #007ACC; color: white;">TypeScript</span>
+              <span class="skill-tag" style="background-color: #38B2AC; color: white;">Tailwind CSS</span>
+              <span class="skill-tag" style="background-color: #61DAFB; color: #333;">React.js</span>
+              <span class="skill-tag" style="background-color: #000000; color: white;">Next.js</span>
+              <span class="skill-tag" style="background-color: #FF3E00; color: white;">Svelte</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-title">Backend Development</h3>
+            <hr class="skill-divider">
+            <div class="skill-tags">
+              <span class="skill-tag" style="background-color: #68A063; color: white;">Node.js</span>
+              <span class="skill-tag" style="background-color: #0C4B33; color: white;">Python</span>
+              <span class="skill-tag" style="background-color: #777BB4; color: white;">PHP</span>
+              <span class="skill-tag" style="background-color: #ad77b4; color: white;">Go</span>
+              <span class="skill-tag" style="background-color: #8b7937; color: white;">Java</span>
+              <span class="skill-tag" style="background-color: #336791; color: white;">PostgreSQL</span>
+              <span class="skill-tag" style="background-color: #00618A; color: white;">MySQL</span>
+              <span class="skill-tag" style="background-color: #4DB33D; color: white;">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-title">Other Skills</h3>
+            <hr class="skill-divider">
+            <div class="skill-tags">
+              <span class="skill-tag" style="background-color: #2088FF; color: white;">PWAs</span>
+              <span class="skill-tag" style="background-color: #FFDD2E; color: #333;">DevOps</span>
+              <span class="skill-tag" style="background-color: #0DB7ED; color: white;">Docker</span>
+              <span class="skill-tag" style="background-color: #F24E1E; color: white;">Figma</span>
+              <span class="skill-tag" style="background-color: #2f2d2d; color: white;">Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="section education-section">
+        <div class="section-header">
+          <h2 class="section-title">Education & Qualifications</h2>
+          <i class="section-icon bx bx-graduation"></i>
+        </div>
+        
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-header">
+              <span class="degree-name">MSc in Computer Science</span>
+              <span class="education-year">2021</span>
+            </div>
+            <div class="institution-name">ESTAM University, Benin</div>
+            <div class="education-details">
+              <p class="education-description">
+                Graduated with Distinction (CGPA 4.46 out of 5.00)
+              </p>
+              <p class="thesis-title">
+                <strong>Thesis:</strong> Edge-Cloud AI Translator
+              </p>
+              <p class="focus-areas">
+                <strong>Focus:</strong> Natural language processing, computer vision, hybrid systems
+              </p>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-header">
+              <span class="degree-name">BSc in Information Technology</span>
+              <span class="education-year">2019</span>
+            </div>
+            <div class="institution-name">ECO.TE.S / Université de la Grâce, Benin</div>
+            <div class="education-details">
+              <p class="education-description">
+                CGPA 4.49 out of 5.00
+              </p>
+              <p class="achievements">
+                <strong>Achievements:</strong> Best IT Graduate and Best Final-Year Project
+              </p>
+              <p class="focus-areas">
+                <strong>Focus:</strong> Encryption, web development, backend systems
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards Section -->
+      <section class="section awards-section">
+        <div class="section-header">
+          <h2 class="section-title">Honors & Awards</h2>
+          <i class="section-icon bx bx-trophy"></i>
+        </div>
+        
+        <div class="awards-grid">
+          <div class="award-card">
+            <div class="award-icon">
+              <i class="bx bx-medal"></i>
+            </div>
+            <div class="award-content">
+              <h3 class="award-title">United Nations Eminent Award</h3>
+              <p class="award-subtitle">Peace and Reconciliation</p>
+              <p class="award-year">2024</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon award-icon-dark">
+              <i class="bx bx-certification"></i>
+            </div>
+            <div class="award-content">
+              <h3 class="award-title">MSc Distinction</h3>
+              <p class="award-subtitle">ESTAM University</p>
+              <p class="award-year">2021 (CGPA 4.46)</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon">
+              <i class="bx bx-star"></i>
+            </div>
+            <div class="award-content">
+              <h3 class="award-title">Best Final-Year Project</h3>
+              <p class="award-subtitle">ECO.TE.S University</p>
+              <p class="award-year">2019</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon">
+              <i class="bx bx-crown"></i>
+            </div>
+            <div class="award-content">
+              <h3 class="award-title">Best IT Graduate</h3>
+              <p class="award-subtitle">BSc Class of 2019</p>
+              <p class="award-year">2019 (CGPA 4.49)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Stack Section -->
+      <section class="section ai-section">
+        <div class="section-header">
+          <h2 class="section-title">AI & Machine Learning</h2>
+          <i class="section-icon bx bx-brain"></i>
+        </div>
+        
+        <p class="section-subtitle">Specialized in building practical AI systems for underserved communities.</p>
+        
+        <div class="ai-grid">
+          <div class="ai-card">
+            <div class="ai-icon">
+              <i class="bx bx-chip"></i>
+            </div>
+            <h3 class="ai-title">LLM Development</h3>
+            <p class="ai-description">
+              OpenAI, Whisper, GPTQ, GGUF, Mistral, LLaMA, and Ollama integration. Deploy models locally and across edge devices.
+            </p>
+          </div>
+
+          <div class="ai-card">
+            <div class="ai-icon">
+              <i class="bx bx-search-alt"></i>
+            </div>
+            <h3 class="ai-title">RAG & Prompt Engineering</h3>
+            <p class="ai-description">
+              Craft structured prompts and build RAG pipelines. Explore fine-tuning and quantization for efficient performance.
+            </p>
+          </div>
+
+          <div class="ai-card">
+            <div class="ai-icon">
+              <i class="bx bx-wifi-off"></i>
+            </div>
+            <h3 class="ai-title">Offline AI Systems</h3>
+            <p class="ai-description">
+              Build AI products that work without internet. Lightweight models with SMS and local device access.
+            </p>
+          </div>
+
+          <div class="ai-card">
+            <div class="ai-icon">
+              <i class="bx bx-camera"></i>
+            </div>
+            <h3 class="ai-title">Multimodal AI</h3>
+            <p class="ai-description">
+              Combine vision, speech, and language with tools like CamClip Plus and Whisper for enhanced interaction.
+            </p>
+          </div>
+
+          <div class="ai-card">
+            <div class="ai-icon ai-icon-dark">
+              <i class="bx bx-shield-alt"></i>
+            </div>
+            <h3 class="ai-title">Ethical AI</h3>
+            <p class="ai-description">
+              Focus on AI fairness, transparency, and the risks of centralized infrastructure in emerging regions.
+            </p>
+          </div>
+
+          <div class="ai-card">
+            <div class="ai-icon">
+              <i class="bx bx-user-check"></i>
+            </div>
+            <h3 class="ai-title">AI Product Strategy</h3>
+            <p class="ai-description">
+              Design and launch AI products with safety, accessibility, and regional language support in mind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Experience Section -->
+      <section class="section experience-section">
+        <div class="section-header">
+          <h2 class="section-title">Work Experience</h2>
+          <i class="section-icon bx bx-laptop"></i>
+        </div>
+
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">Programmify</span>
+              <span class="status-badge status-current">Current</span>
+            </div>
+            <div class="role-title">Cofounder/Program Director</div>
+            <p class="experience-description">
+              Programmify is an innovative tech platform empowering Africa's next generation of tech talent. 
+              As CEO, I lead the team in scaling product development, driving strategic programs, overseeing 
+              executive functions, and accelerating growth initiatives to amplify our community impact.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">GitRoll</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Head of Africa (Marketing, Growth, Partnerships, Product)</div>
+            <p class="experience-description">
+              GitRoll promotes open source contributions. Led African regional strategy, focusing on engagement, 
+              partnership building, and resource allocation to foster community growth.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">ESTAM University</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Computer Science Lecturer</div>
+            <p class="experience-description">
+              ESTAM University is a Higher School of Technology and Management, with campuses across Francophone Africa. 
+              Taught advanced programming, AI introductory, and networking courses, supervised projects, and nurtured 
+              the next generation of tech talent.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">Botamp</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Marketing Manager</div>
+            <p class="experience-description">
+              Botamp offers digital solutions for SMEs. Collaborated on marketing efforts focusing on brand visibility 
+              and user acquisition in new markets.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">Iwaria</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Marketing Manager</div>
+            <p class="experience-description">
+              Iwaria is an African stock photo platform. Led marketing campaigns to elevate brand presence and 
+              connect with diverse African photographers.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">Etrilabs (Happierco)</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Head of Marketing</div>
+            <p class="experience-description">
+              Happierco provides employee engagement solutions. Directed the marketing strategy to boost brand 
+              awareness and customer engagement.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">Oculate</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Software Engineer</div>
+            <p class="experience-description">
+              Oculate offers data insights solutions. As a software engineer, I developed backend services 
+              that supported data analytics.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="company-name">Code To Create</span>
+              <span class="status-badge status-past">Past</span>
+            </div>
+            <div class="role-title">Programming Tutor</div>
+            <p class="experience-description">
+              Code To Create is a coding bootcamp for aspiring developers. Developed interactive platforms, 
+              facilitating hands-on learning experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section projects-section">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <i class="section-icon bx bx-rocket"></i>
+        </div>
+        
+        <p class="section-subtitle">Innovative solutions built for privacy, accessibility, and inclusive infrastructure.</p>
+        
+        <div class="projects-grid">
+          <div class="project-card project-live">
+            <div class="project-header">
+              <h3 class="project-title">Tendly</h3>
+              <span class="project-status">Live</span>
+            </div>
+            <p class="project-description">
+              A privacy-first sharing app for sensitive files and notes. Fully encrypted, ephemeral, and frictionless.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Privacy</span>
+              <span class="tech-tag">Encryption</span>
+              <span class="tech-tag">Ephemeral</span>
+            </div>
+            <div class="project-links">
+              <a href="https://tendly.xyz" class="project-link" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+                Visit Site
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-upcoming">
+            <div class="project-header">
+              <h3 class="project-title">AANI</h3>
+              <span class="project-status">Coming Soon</span>
+            </div>
+            <p class="project-description">
+              An offline-first AI assistant built for users without stable internet. Available through SMS and local apps.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">AI</span>
+              <span class="tech-tag">Offline</span>
+              <span class="tech-tag">SMS</span>
+            </div>
+              <div class="project-links">
+                <a href="#" class="project-link project-disabled">
+                  <i class="bx bx-time"></i>
+                  In Development
+                </a>
+              </div>
+          </div>
+
+          <div class="project-card project-live">
+            <div class="project-header">
+              <h3 class="project-title">Programmify</h3>
+              <span class="project-status">Live</span>
+            </div>
+            <p class="project-description">
+              A modern developer academy offering builder tracks, mentorship labs, and team-based project launches.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Education</span>
+              <span class="tech-tag">Mentorship</span>
+              <span class="tech-tag">Community</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-upcoming">
+            <div class="project-header">
+              <h3 class="project-title">Moodblush</h3>
+              <span class="project-status">Coming Soon</span>
+            </div>
+            <p class="project-description">
+              An expressive emotion-mapping and journaling app with a minimalist, privacy-focused experience.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Privacy</span>
+              <span class="tech-tag">Journaling</span>
+              <span class="tech-tag">Emotions</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link project-disabled">
+                <i class="bx bx-time"></i>
+                In Development
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-upcoming">
+            <div class="project-header">
+              <h3 class="project-title">DevPassport</h3>
+              <span class="project-status">Coming Soon</span>
+            </div>
+            <p class="project-description">
+              A decentralized verification and identity system for developers and builder communities.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Decentralized</span>
+              <span class="tech-tag">Identity</span>
+              <span class="tech-tag">Verification</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link project-disabled">
+                <i class="bx bx-time"></i>
+                In Development
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-upcoming">
+            <div class="project-header">
+              <h3 class="project-title">Glassdrop UI</h3>
+              <span class="project-status">Coming Soon</span>
+            </div>
+            <p class="project-description">
+              A futuristic ephemeral UI system — drag, drop, or export intentional, motion-first interface blocks that disappear beautifully or live in your code.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">UI</span>
+              <span class="tech-tag">Ephemeral</span>
+              <span class="tech-tag">Glassmorphism</span>
+              <span class="tech-tag">Motion</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link project-disabled">
+                <i class="bx bx-time"></i>
+                In Development
+              </a>
+            </div>
+          </div>
+          
+
+          <div class="project-card project-upcoming">
+            <div class="project-header">
+              <h3 class="project-title">CamClip Plus</h3>
+              <span class="project-status">Coming Soon</span>
+            </div>
+            <p class="project-description">
+              A smart AI camera enhancer for mobile and embedded devices. Focuses on quality optimization and automation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">AI</span>
+              <span class="tech-tag">Camera</span>
+              <span class="tech-tag">Optimization</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link project-disabled">
+                <i class="bx bx-time"></i>
+                In Development
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-live">
+            <div class="project-header">
+              <h3 class="project-title">PIP (Programmify Internship Program)</h3>
+              <span class="project-status">Live</span>
+            </div>
+            <p class="project-description">
+              PIP1–PIP4 built a clear track of community-led learning and real-world projects. Includes public launches, team builds, mentorship, and curriculum design. Grew from 10 mentees to over 100+ builders across Africa.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Education</span>
+              <span class="tech-tag">Mentorship</span>
+              <span class="tech-tag">Community</span>
+              <span class="tech-tag">Curriculum</span>
+            </div>
+            <div class="project-links">
+              <a href="https://academy.programmify.org/Internship" class="project-link" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-live">
+            <div class="project-header">
+              <h3 class="project-title">DaveKings Nigeria Ltd</h3>
+              <span class="project-status">Live</span>
+            </div>
+            <p class="project-description">
+              Agribusiness e‑commerce and investment platform for Nigeria farmers and investors. Features product catalogs (fresh produce, livestock), secure investment plans, multilingual support, and farm-to-door delivery. Designed UI/UX, built frontend/backend integration, set up Paystack payments and WhatsApp automation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">E‑commerce</span>
+              <span class="tech-tag">Agritech</span>
+              <span class="tech-tag">Full‑stack</span>
+              <span class="tech-tag">Multilingual</span>
+              <span class="tech-tag">Payments</span>
+            </div>
+            <div class="project-links">
+              <a href="https://davekings.com" class="project-link" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+                Visit Site
+              </a>
+            </div>
+          </div>
+          
+
+          <div class="project-card project-upcoming">
+            <div class="project-header">
+              <h3 class="project-title">Nationwide Power Tracker</h3>
+              <span class="project-status">Unreleased</span>
+            </div>
+            <p class="project-description">
+              Manual user reporting system for electricity availability in Nigeria. Reports power source (NEPA, generator, solar) with privacy-first local logging.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Privacy</span>
+              <span class="tech-tag">Local Storage</span>
+              <span class="tech-tag">Reporting</span>
+              <span class="tech-tag">Infrastructure</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link project-disabled">
+                <i class="bx bx-time"></i>
+                In Development
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card project-live">
+            <div class="project-header">
+              <h3 class="project-title">West Sunset NFT</h3>
+              <span class="project-status">Live</span>
+            </div>
+            <p class="project-description">
+              A rare collection living on the Ethereum blockchain that captures the moment the sun sets in the west straight out of West Africa. Each NFT symbolizes strength, ambition, and the beauty of dreams.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">NFT</span>
+              <span class="tech-tag">Ethereum</span>
+              <span class="tech-tag">ERC-1155</span>
+              <span class="tech-tag">OpenSea</span>
+            </div>
+            <div class="project-links">
+              <a href="https://opensea.io/collection/westsunset" class="project-link" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+                View Collection
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Articles Section -->
+      <section class="section articles-section">
+        <div class="section-header">
+          <h2 class="section-title"> Essays & Blog Posts</h2>
+          <i class="section-icon bx bx-pencil"></i>
+        </div>
+
+        <div class="articles-list">
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/@TonyCletus/the-hidden-cost-of-free-how-ai-apps-and-crypto-are-exploiting-your-data-especially-in-africa-eb0d425d6fc0" class="article-link" target="_blank" rel="noopener">
+              “The Hidden Cost of Free” – AI, crypto, and exploitation in Africa/Asia
+            </a>
+          </article>
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/@TonyCletus/resilience-redemption-and-dreams-my-2024-journey-a4f3ff3e7b5c" class="article-link" target="_blank" rel="noopener">
+              Resilience, Redemption, and Dreams: My 2024 Journey
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7" class="article-link" target="_blank" rel="noopener">
+              Silicon Valley is not Just A Place, It is A State of Mind
+            </a>
+          </article>
+
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="/src/posts/estam-digital-marketing.html" class="article-link" target="_blank" rel="noopener">
+              Useful Digital Marketing Tools for Your Online Busines
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://tonycletus.hashnode.dev/15-websites-you-can-promote-your-product-as-an-indie-maker-ckp6j18d409wdmds1dnrobbru" class="article-link" target="_blank" rel="noopener">
+              15 websites you can promote your product as an indie maker
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://dev.to/tonycletus/the-outcomes-of-developers-embracing-no-code-2bpi" class="article-link" target="_blank" rel="noopener">
+              The outcomes of developers embracing No-code
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://dev.to/tonycletus/fuck-imposter-syndrome-2089" class="article-link" target="_blank" rel="noopener">
+              Fvck Imposter Syndrome!
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://www.linkedin.com/pulse/complete-company-guide-okrs-methodology-front-back-tony-cletus" class="article-link" target="_blank" rel="noopener">
+              The Complete Company Guide on OKRs Methodology – Front to Back
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/tonycletus/the-effect-of-web-programming-on-scientific-innovation-a59108dda369" class="article-link" target="_blank" rel="noopener">
+              The Effect of Web Programming on Scientific Innovation
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/tonycletus/how-to-become-a-self-taught-programmer-you-can-do-it-2bffea6615f" class="article-link" target="_blank" rel="noopener">
+              How To Become A Self-Taught Programmer — You Can Do It!
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://www.linkedin.com/pulse/steps-successfully-manage-your-goals-okrs-tony-cletus" class="article-link" target="_blank" rel="noopener">
+              Steps To Successfully Manage Your Goals With OKRs
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://www.linkedin.com/pulse/tips-improve-employee-feedback-quality-your-tony-cletus" class="article-link" target="_blank" rel="noopener">
+              Tips To Improve Employee Feedback Quality in Your Organization
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://www.linkedin.com/pulse/how-engage-your-team-overcome-company-challenges-tony-cletus" class="article-link" target="_blank" rel="noopener">
+              How To Engage Your Team and Overcome Your Company Challenges
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/tonycletus/the-truth-about-gender-gap-in-the-tech-field-a-call-to-extirpate-this-stereotype-5810023545fe" class="article-link" target="_blank" rel="noopener">
+              The Truth About Gender Gap In The Tech Field: A Call To Extirpate This Stereotype
+            </a>
+          </article>
+          
+          <article class="article-item">
+            <i class="bx bx-pen article-icon"></i>
+            <a href="https://medium.com/tonycletus/an-insight-into-the-domain-of-computer-programming-and-its-relevance-importance-to-the-world-of-40d0a45c127c" class="article-link" target="_blank" rel="noopener">
+              An Insight Into the Domain of Computer Programming and Its Importance to the World of Technology
+            </a>
+          </article>
+          
+          <div class="articles-upcoming">
+            <h3 class="upcoming-title">Upcoming Articles</h3>
+            <article class="article-item article-upcoming">
+              <i class="bx bx-time article-icon"></i>
+              <span class="article-link">Exploring LLM-Powered Developer Tools: From Vision to Prototype</span>
+            </article>
+            <article class="article-item article-upcoming">
+              <i class="bx bx-time article-icon"></i>
+              <span class="article-link">Why We Are Building AANI</span>
+            </article>
+            <article class="article-item article-upcoming">
+              <i class="bx bx-time article-icon"></i>
+              <span class="article-link">Tendly: Building for Ephemeral Privacy</span>
+            </article>
+            <article class="article-item article-upcoming">
+              <i class="bx bx-time article-icon"></i>
+              <span class="article-link">SLM vs LLM — comparing lightweight and large-scale models</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="section newsletter-section">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h3 class="newsletter-title">Get Updates</h3>
+            <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
+            
+            <form id="newsletter-form" class="newsletter-form" novalidate>
+              <div class="form-group">
+                <input 
+                  type="email" 
+                  id="newsletter-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="Your email address"
+                  required
+                  autocomplete="email"
+                />
+                <div class="form-error" id="email-error"></div>
+              </div>
+              
+              <button type="submit" class="form-button" id="submit-button">
+                <span class="button-text">Subscribe</span>
+                <i class="bx bx-bell button-icon"></i>
+                <div class="button-loader" id="button-loader"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-text">
+          Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus 
+          &copy; <span id="current-year"></span>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Theme Management
+    function applyTheme(theme) {
+      document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+      document.body.classList.add(`theme-${theme}`);
+      localStorage.setItem("theme", theme);
+    }
+
+    function initializeTheme() {
+      const savedTheme = localStorage.getItem("theme") || "dark";
+      applyTheme(savedTheme);
+      
+      const themeSelector = document.getElementById("theme-selector");
+      themeSelector.value = savedTheme;
+      
+      themeSelector.addEventListener("change", function() {
+        applyTheme(this.value);
+        triggerHapticFeedback('theme');
+      });
+    }
+
+    // Custom Toast Notification System
+    class ToastManager {
+      constructor() {
+        this.container = document.getElementById('toast-container');
+      }
+
+      show(message, type = 'info', duration = 4000) {
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        
+        const icon = this.getIcon(type);
+        
+        toast.innerHTML = `
+          <div class="toast-content">
+            <i class="toast-icon ${icon}"></i>
+            <span class="toast-message">${message}</span>
+          </div>
+          <button class="toast-close" onclick="this.parentElement.remove()">
+            <i class="bx bx-x"></i>
+          </button>
+        `;
+
+        this.container.appendChild(toast);
+
+        // Add entrance animation
+        setTimeout(() => toast.classList.add('toast-show'), 10);
+
+        // Auto remove
+        setTimeout(() => {
+          if (toast.parentElement) {
+            toast.classList.remove('toast-show');
+            setTimeout(() => toast.remove(), 300);
+          }
+        }, duration);
+
+        // Haptic feedback (if supported)
+        triggerHapticFeedback('light');
+      }
+
+      getIcon(type) {
+        const icons = {
+          success: 'bx bx-check-circle',
+          error: 'bx bx-error-circle',
+          warning: 'bx bx-error',
+          info: 'bx bx-info-circle'
+        };
+        return icons[type] || icons.info;
+      }
+    }
+
+    // Newsletter Form with Enhanced UX
+    class NewsletterForm {
+      constructor() {
+        this.form = document.getElementById('newsletter-form');
+        this.emailInput = document.getElementById('newsletter-email');
+        this.submitButton = document.getElementById('submit-button');
+        this.buttonText = this.submitButton.querySelector('.button-text');
+        this.buttonLoader = document.getElementById('button-loader');
+        this.emailError = document.getElementById('email-error');
+        this.toast = new ToastManager();
+        
+        this.initializeForm();
+      }
+
+      initializeForm() {
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+        this.emailInput.addEventListener('input', () => this.clearError());
+        this.emailInput.addEventListener('blur', () => this.validateEmail());
+      }
+
+      validateEmail() {
+        const email = this.emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!email) {
+          this.showError('Email is required');
+          return false;
+        }
+        
+        if (!emailRegex.test(email)) {
+          this.showError('Please enter a valid email address');
+          return false;
+        }
+        
+        return true;
+      }
+
+      showError(message) {
+        this.emailError.textContent = message;
+        this.emailInput.classList.add('input-error');
+      }
+
+      clearError() {
+        this.emailError.textContent = '';
+        this.emailInput.classList.remove('input-error');
+      }
+
+      setLoading(loading) {
+        this.submitButton.disabled = loading;
+        this.emailInput.disabled = loading;
+        
+        if (loading) {
+          this.buttonText.textContent = 'Subscribing...';
+          this.buttonLoader.style.display = 'block';
+        } else {
+          this.buttonText.textContent = 'Subscribe';
+          this.buttonLoader.style.display = 'none';
+        }
+      }
+
+      async handleSubmit(e) {
+        e.preventDefault();
+        
+        if (!this.validateEmail()) {
+          return;
+        }
+
+        this.setLoading(true);
+
+        try {
+          const formData = new FormData(this.form);
+          const email = formData.get('email');
+          
+          // Simulate successful subscription (no actual API call for demo)
+          await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
+          
+          this.toast.show('Successfully subscribed! Welcome to the community.', 'success');
+          triggerHapticFeedback('success');
+          this.form.reset();
+          
+        } catch (error) {
+          console.error('Subscription error:', error);
+          this.toast.show('Failed to subscribe. Please try again.', 'error');
+          triggerHapticFeedback('error');
+        } finally {
+          this.setLoading(false);
+        }
+      }
+    }
+
+    // Haptic Feedback Utility
+    function triggerHapticFeedback(intensity = 'light') {
+      if (navigator.vibrate) {
+        const patterns = {
+          light: [10],
+          medium: [20],
+          strong: [30],
+          success: [50, 50, 50],
+          error: [100, 50, 100],
+          theme: [15, 15, 15]
+        };
+        navigator.vibrate(patterns[intensity] || patterns.light);
+      }
+    }
+
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize theme
+      initializeTheme();
+      
+      // Initialize newsletter form
+      new NewsletterForm();
+      
+      // Set current year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Add haptic feedback to interactive elements
+      const hapticElements = document.querySelectorAll(`
+        .form-button, .cv-button, .hero-button, .download-button, 
+        .project-link, .social-link, .theme-select, .tool-link,
+        .article-link, .skill-card, .experience-item, .ai-card,
+        .project-card, .award-card, .education-item
+      `);
+      
+      hapticElements.forEach(element => {
+        element.addEventListener('click', () => {
+          triggerHapticFeedback('light');
+        });
+        
+        element.addEventListener('mouseenter', () => {
+          triggerHapticFeedback('light');
+        });
+      });
+      
+      // Special haptic feedback for theme switching
+      const themeSelector = document.getElementById('theme-selector');
+      if (themeSelector) {
+        themeSelector.addEventListener('change', () => {
+          triggerHapticFeedback('theme');
+        });
+      }
+      
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add intersection observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe sections for animation
+      document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+      });
+
+      // Progress Bar Functionality
+      const progressBar = document.getElementById('progress-bar');
+      const progressText = document.getElementById('progress-text');
+      let progressTimeout;
+
+      function updateProgress() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        
+        progressBar.style.width = scrollPercent + '%';
+        progressText.textContent = Math.round(scrollPercent) + '%';
+        
+        // Show progress text when scrolling
+        progressText.classList.add('show');
+        clearTimeout(progressTimeout);
+        
+        progressTimeout = setTimeout(() => {
+          progressText.classList.remove('show');
+        }, 2000);
+      }
+
+      // Throttle scroll events for performance
+      let ticking = false;
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', () => {
+        ticking = false;
+        requestTick();
+      });
+
+      // Initial progress update
+      updateProgress();
+    });
+
+    // Service Worker Registration
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register('../public/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toast Test - Tony Cletus</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="toast-container" class="toast-container"></div>
+  
+  <div style="padding: 2rem; max-width: 600px; margin: 0 auto;">
+    <h1>Toast Notification Test</h1>
+    <p>Click the buttons below to test different toast notifications:</p>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 2rem 0;">
+      <button onclick="showToast('success', 'Success! Your action was completed successfully.')" style="padding: 12px 24px; background: #10b981; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        Success Toast
+      </button>
+      
+      <button onclick="showToast('error', 'Error! Something went wrong. Please try again.')" style="padding: 12px 24px; background: #ef4444; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        Error Toast
+      </button>
+      
+      <button onclick="showToast('warning', 'Warning! Please check your input.')" style="padding: 12px 24px; background: #f59e0b; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        Warning Toast
+      </button>
+      
+      <button onclick="showToast('info', 'Info: Here is some helpful information.')" style="padding: 12px 24px; background: #3b82f6; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        Info Toast
+      </button>
+    </div>
+    
+    <div style="margin-top: 2rem;">
+      <a href="index.html" style="color: #f0f2a1; text-decoration: none;">← Back to Portfolio</a>
+    </div>
+  </div>
+
+  <script>
+    // Toast Manager Class
+    class ToastManager {
+      constructor() {
+        this.container = document.getElementById('toast-container');
+      }
+
+      show(message, type = 'info', duration = 4000) {
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        
+        const icon = this.getIcon(type);
+        
+        toast.innerHTML = `
+          <div class="toast-content">
+            <i class="toast-icon ${icon}"></i>
+            <span class="toast-message">${message}</span>
+          </div>
+          <button class="toast-close" onclick="this.parentElement.remove()">
+            <i class="bx bx-x"></i>
+          </button>
+        `;
+
+        this.container.appendChild(toast);
+
+        // Add entrance animation
+        setTimeout(() => toast.classList.add('toast-show'), 10);
+
+        // Auto remove
+        setTimeout(() => {
+          if (toast.parentElement) {
+            toast.classList.remove('toast-show');
+            setTimeout(() => toast.remove(), 300);
+          }
+        }, duration);
+
+        // Haptic feedback (if supported)
+        if (navigator.vibrate) {
+          navigator.vibrate(50);
+        }
+      }
+
+      getIcon(type) {
+        const icons = {
+          success: 'bx bx-check-circle',
+          error: 'bx bx-error-circle',
+          warning: 'bx bx-error',
+          info: 'bx bx-info-circle'
+        };
+        return icons[type] || icons.info;
+      }
+    }
+
+    // Initialize toast manager
+    const toastManager = new ToastManager();
+
+    // Function to show toast (for button clicks)
+    function showToast(type, message) {
+      toastManager.show(message, type);
+    }
+  </script>
+</body>
+</html> 
