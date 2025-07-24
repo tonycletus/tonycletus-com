@@ -35,10 +35,11 @@
   <meta name="msapplication-TileColor" content="#f0f2a1" />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="../public/img/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../public/img/logo.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../public/img/logo.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../public/img/logo.png" />
+  <link rel="icon" type="image/x-icon" href="public/img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon.png" />
+  <link rel="shortcut icon" href="public/img/favicon.ico" />
   
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +55,7 @@
   <link rel="stylesheet" href="css/style.css">
   
   <!-- PWA -->
-  <link rel="manifest" href="../public/manifest.json">
+  <link rel="manifest" href="public/manifest.json">
 </head>
 
 <body>
@@ -75,7 +76,7 @@
       <!-- Header -->
       <header class="header">
         <div class="header-brand">
-          <img src="../public/img/logo.png" class="brand-logo" alt="Tony Cletus Logo" />
+          <img src="public/img/logo.png" class="brand-logo" alt="Tony Cletus Logo" />
           <h1 class="brand-name">Tony Cletus</h1>
         </div>
 
@@ -159,14 +160,14 @@
               </div>
             </div>
             <div class="cv-actions">
-              <a href="../public/downloads/anthony-cletus-resume.pdf" 
+              <a href="public/downloads/anthony-cletus-resume.pdf" 
                  class="cv-button cv-button-primary" 
                  target="_blank" 
                  rel="noopener">
                 <i class="bx bx-file-pdf"></i>
                 View CV
               </a>
-              <a href="../public/downloads/anthony-cletus-resume.pdf" 
+              <a href="public/downloads/anthony-cletus-resume.pdf" 
                  class="cv-button cv-button-secondary" 
                  download="Anthony-Cletus-Resume.pdf">
                 <i class="bx bx-download"></i>
@@ -753,7 +754,7 @@
               <span class="tech-tag">OpenSea</span>
             </div>
             <div class="project-links">
-              <a href="https://opensea.io/collection/westsunset" class="project-link" target="_blank" rel="noopener">
+              <a href="westsunset.html" class="project-link">
                 <i class="bx bx-link-external"></i>
                 View Collection
               </a>
@@ -903,7 +904,13 @@
             <h3 class="newsletter-title">Get Updates</h3>
             <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
             
-            <form id="newsletter-form" class="newsletter-form" novalidate>
+            <form id="newsletter-form" class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="newsletter" />
+              <p class="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               <div class="form-group">
                 <input 
                   type="email" 
@@ -1080,14 +1087,40 @@
 
         try {
           const formData = new FormData(this.form);
-          const email = formData.get('email');
           
-          // Simulate successful subscription (no actual API call for demo)
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
+          // Check if we're in development (localhost) or production
+          const isDevelopment = window.location.hostname === 'localhost' || 
+                               window.location.hostname === '127.0.0.1' || 
+                               window.location.hostname === '';
           
-          this.toast.show('Successfully subscribed! Welcome to the community.', 'success');
-          triggerHapticFeedback('success');
-          this.form.reset();
+          if (isDevelopment) {
+            // Simulate form submission in development
+            console.log('Development mode: Simulating form submission');
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
+            
+            // Log the form data for development
+            const email = formData.get('email');
+            console.log('Form data that would be submitted:', { email });
+            
+            this.toast.show('Successfully subscribed! Welcome to the community.', 'success');
+            triggerHapticFeedback('success');
+            this.form.reset();
+          } else {
+            // Submit to Netlify in production
+            const response = await fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(formData).toString()
+            });
+
+            if (response.ok) {
+              this.toast.show('Successfully subscribed! Welcome to the community.', 'success');
+              triggerHapticFeedback('success');
+              this.form.reset();
+            } else {
+              throw new Error(`Form submission failed: ${response.status}`);
+            }
+          }
           
         } catch (error) {
           console.error('Subscription error:', error);
@@ -1124,6 +1157,39 @@
       
       // Set current year
       document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Check for success parameter from form submission
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('subscribed') === 'true') {
+        const toast = new ToastManager();
+        toast.show('Successfully subscribed! Welcome to the community.', 'success');
+        // Clean up the URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+      
+      // Show development mode indicator
+      const isDevelopment = window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1' || 
+                           window.location.hostname === '';
+      if (isDevelopment) {
+        const devBanner = document.createElement('div');
+        devBanner.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: #f59e0b;
+          color: white;
+          text-align: center;
+          padding: 8px;
+          font-size: 12px;
+          font-weight: 600;
+          z-index: 10001;
+          font-family: 'Syne', sans-serif;
+        `;
+        devBanner.textContent = '🛠️ Development Mode - Form submissions are simulated';
+        document.body.appendChild(devBanner);
+      }
       
       // Add haptic feedback to interactive elements
       const hapticElements = document.querySelectorAll(`
@@ -1226,7 +1292,7 @@
 
     // Service Worker Registration
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register('../public/sw.js')
+      navigator.serviceWorker.register('public/sw.js')
         .then(registration => {
           console.log('Service Worker registered successfully:', registration);
         })

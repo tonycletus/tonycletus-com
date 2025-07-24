@@ -1,0 +1,24 @@
+{
+  "name": "tonycletus-portfolio",
+  "version": "1.0.0",
+  "description": "Tony Cletus - Full-Stack Developer & Product Manager Portfolio",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "echo 'This is a static site. Open src/index.html in your browser.'",
+    "build": "echo 'No build process needed for static HTML site.'",
+    "deploy": "echo 'Deploy to Netlify by pushing to connected repository.'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "fullstack",
+    "product-manager",
+    "ai",
+    "static-site"
+  ],
+  "author": "Tony Cletus",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

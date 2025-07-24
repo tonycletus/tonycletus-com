@@ -1,179 +1,122 @@
 # Tony Cletus - Portfolio Website
 
-A modern, responsive portfolio website showcasing the work and expertise of Tony Cletus - a full-stack developer, digital marketer, and product manager with 5+ years of experience.
-
-## 🏗️ Project Structure
-
-```
-tonycletus-com/
-├── public/                  # Static assets served as-is
-│   ├── downloads/          # Resume, CV, and downloadable content
-│   ├── img/               # Images, icons, and favicon
-│   ├── manifest.json      # PWA manifest file
-│   └── sw.js             # Service worker for PWA functionality
-├── src/                   # Source files (HTML, CSS)
-│   ├── css/              # Stylesheets
-│   ├── posts/            # Blog posts and articles
-│   ├── index.html        # Main portfolio page
-│   ├── westsunset.html   # West Sunset NFT showcase
-│   └── test-toast.html   # Toast notification test page
-├── README.md             # This file
-└── .gitignore           # Git ignore rules
-```
+A modern, responsive portfolio website showcasing Tony Cletus's work as a Full-Stack Developer, Product Manager, and AI researcher.
 
 ## 🚀 Features
 
-- **Modern UI/UX Design**: Clean, professional design with smooth animations and transitions
-- **Custom Toast Notifications**: Built-in notification system similar to MagicUI/React Toast
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Dark/Light Theme**: Toggle between themes with system preference detection
-- **PWA Support**: Progressive Web App with offline capabilities
-- **Semantic HTML**: Accessible and SEO-friendly markup
-- **Modern CSS**: CSS custom properties, Flexbox, Grid, and responsive design
-- **Performance Optimized**: Optimized images and efficient loading
-- **Haptic Feedback**: Vibration feedback on mobile devices (where supported)
-- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Responsive Design** - Works perfectly on all devices
+- **Dark/Light Theme** - User preference with auto-detection
+- **PWA Ready** - Progressive Web App with offline capabilities
+- **Performance Optimized** - Fast loading with optimized assets
+- **SEO Optimized** - Meta tags, Open Graph, and Twitter Cards
+- **Accessibility** - WCAG compliant with proper ARIA labels
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- **HTML5**: Semantic markup and accessibility features
-- **CSS3**: Custom properties, Flexbox, Grid, and responsive design
-- **JavaScript**: Vanilla JS for theme switching, toast notifications, and PWA functionality
-- **PWA**: Service worker and manifest for app-like experience
-- **Fonts**: Google Fonts (Syne) and Boxicons for icons
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with custom properties
+- **JavaScript** - Vanilla JS for interactivity
+- **Boxicons** - Icon library
+- **Google Fonts** - Typography
 
-## 🎨 Design System
+## 📁 Project Structure
 
-### Color Scheme
-- **Primary**: Custom CSS variables for easy theming
-- **Dark Theme**: `#0a0a0a` background, `#ffffff` text, `#f0f2a1` accent
-- **Light Theme**: `#ffffff` background, `#37352F` text, `#000000` accent
-- **Success**: `#10b981` (green)
-- **Error**: `#ef4444` (red)
-- **Warning**: `#f59e0b` (yellow)
-- **Info**: `#3b82f6` (blue)
+```
+tonycletus-com/
+├── src/                    # Source files (publish directory)
+│   ├── index.html         # Main portfolio page
+│   ├── css/               # Stylesheets
+│   ├── posts/             # Blog posts
+│   ├── public/            # Static assets
+│   │   ├── img/           # Images and logos
+│   │   ├── downloads/     # PDF files
+│   │   ├── manifest.json  # PWA manifest
+│   │   └── sw.js         # Service Worker
+│   └── ...
+├── netlify.toml          # Netlify configuration
+├── package.json          # Project metadata
+└── README.md             # This file
+```
 
-### Typography
-- **Primary Font**: Syne (Google Fonts) - 400, 500, 600, 700, 800 weights
-- **Icon Font**: Boxicons
-- **Responsive**: Fluid typography with breakpoints
+## 🚀 Deployment
 
-### Components
-- **Toast Notifications**: Custom-built notification system with 4 types (success, error, warning, info)
-- **Cards**: Elevated design with hover effects and smooth transitions
-- **Buttons**: Interactive buttons with loading states and haptic feedback
-- **Forms**: Modern form design with validation and error handling
+### Netlify (Recommended)
 
-## 📁 Directory Structure Details
+This site is configured for effortless deployment on Netlify:
 
-### `/public/` - Static Assets
-- **downloads/**: PDF files (resume, CV, digital marketing guide)
-- **img/**: All images including:
-  - Portfolio images
-  - Sunset NFT collection
-  - Icons and favicon
-  - Banners and logos
-- **manifest.json**: PWA configuration
-- **sw.js**: Service worker for offline functionality
+1. **Connect Repository**: Link your GitHub/GitLab repository to Netlify
 
-### `/src/` - Source Files
-- **css/style.css**: Main stylesheet with modern design system
-- **posts/**: Blog posts and articles
-- **index.html**: Main portfolio page with enhanced UI/UX
-- **westsunset.html**: NFT showcase page
-- **test-toast.html**: Toast notification testing page
+2. **Auto-Deploy**: Netlify will automatically detect the configuration and deploy
 
-## 🔧 Development
+3. **No Build Required**: This is a static site - no build process needed
 
-### Local Development
+4. **Easy Updates**: Just commit and push your changes:
+   ```bash
+   git add .
+   git commit -m "Update site"
+   git push
+   ```
+
+#### Netlify Configuration
+
+The `netlify.toml` file includes:
+- **Publish Directory**: `src` (where your `index.html` is located)
+- **No Build Command**: Static site doesn't need building
+- **Security Headers**: XSS protection, frame options, etc.
+- **Caching**: Optimized cache headers for static assets
+- **Redirects**: Clean URL handling
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
 1. Clone the repository
-2. Navigate to the `src/` directory
-3. Start a local server:
+2. Upload the `src` directory contents to your web server
+3. Ensure the `public` folder is accessible
+
+## 🔧 Local Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/tonycletus-com.git
+   cd tonycletus-com
+   ```
+
+2. Open `src/index.html` in your browser or use a local server:
    ```bash
    # Using Python
    python -m http.server 8000
    
-   # Using Node.js (if you have http-server installed)
-   npx http-server
+   # Using Node.js
+   npx serve src
    ```
-4. Open `http://localhost:8000` in your browser
 
-### Testing Toast Notifications
-Visit `http://localhost:8000/test-toast.html` to test the custom toast notification system.
+3. Visit `http://localhost:8000` in your browser
 
-### File Organization
-- **HTML Files**: Located in `/src/` with semantic structure
-- **CSS**: Single file in `/src/css/` with modern design system
-- **Assets**: All static files in `/public/` for easy serving
-- **Images**: Optimized and organized in `/public/img/`
+## 📝 Customization
 
-### Best Practices
-- Use semantic HTML5 elements
-- Maintain accessibility standards (ARIA labels, alt text)
-- Follow responsive design principles
-- Optimize images for web
-- Use CSS custom properties for theming
-- Implement proper error handling
-- Add haptic feedback for mobile interactions
+### Content Updates
+- Edit `src/index.html` to update your portfolio content
+- Modify `src/css/style.css` for styling changes
+- Update images in `src/public/img/`
 
-## 🎯 UI/UX Improvements
+### SEO & Meta Tags
+- Update meta tags in the `<head>` section of `index.html`
+- Modify Open Graph and Twitter Card properties
+- Update the `src/public/manifest.json` for PWA settings
 
-### Modern Design Principles
-- **Consistency**: Unified design language across all components
-- **Accessibility**: WCAG 2.1 AA compliance
-- **Performance**: Optimized animations and transitions
-- **Responsiveness**: Mobile-first design approach
-- **Interactivity**: Smooth hover effects and micro-interactions
+## 🌐 Live Site
 
-### Custom Toast System
-- **4 Types**: Success, Error, Warning, Info
-- **Auto-dismiss**: Configurable duration (default: 4 seconds)
-- **Manual close**: Click X to dismiss immediately
-- **Haptic feedback**: Vibration on mobile devices
-- **Smooth animations**: Slide-in/out with opacity transitions
-- **Accessible**: Proper ARIA labels and keyboard navigation
-
-### Enhanced Form Experience
-- **Real-time validation**: Instant feedback on input
-- **Loading states**: Visual feedback during submission
-- **Error handling**: Clear error messages with toast notifications
-- **Success feedback**: Confirmation messages
-- **Accessibility**: Proper form labels and error associations
-
-## 📱 PWA Features
-
-- **Offline Support**: Service worker caches essential resources
-- **Installable**: Can be installed as a native app
-- **Manifest**: App metadata and icons
-- **Theme Color**: Consistent branding across platforms
-
-## 🚀 Deployment
-
-The site is designed to be deployed as static files. Simply upload the contents to any web server or static hosting service:
-
-- **Netlify**: Drag and drop the project folder
-- **Vercel**: Connect your Git repository
-- **GitHub Pages**: Push to a GitHub repository
-- **Traditional Hosting**: Upload via FTP/SFTP
-
-## 🔒 Security Features
-
-- **CSRF Protection**: Form tokens and validation
-- **Input Sanitization**: Proper email validation
-- **XSS Prevention**: Content Security Policy headers
-- **HTTPS Ready**: Secure asset loading
+Visit: [https://tonycletus.com](https://tonycletus.com)
 
 ## 📄 License
 
-This project is personal and proprietary. All rights reserved.
+MIT License - feel free to use this template for your own portfolio!
 
-## 👤 Contact
+## 🤝 Contributing
 
-- **Email**: tc@tonycletus.com
-- **Twitter**: [@iamtonycletus](https://twitter.com/iamtonycletus)
-- **LinkedIn**: [Tony Cletus](https://linkedin.com/in/tonycletus)
-- **GitHub**: [tonycletus](https://github.com/tonycletus)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-*Built with ❤️ by Tony Cletus*
+Built with ❤️ by Tony Cletus
