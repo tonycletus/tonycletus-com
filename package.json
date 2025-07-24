@@ -1,24 +1,20 @@
 {
-  "name": "tonycletus-portfolio",
+  "name": "tonycletus-com",
   "version": "1.0.0",
-  "description": "Tony Cletus - Full-Stack Developer & Product Manager Portfolio",
-  "main": "src/index.html",
+  "description": "Tony Cletus Portfolio and West Sunset NFT Collection",
+  "engines": {
+    "node": "18.19.0"
+  },
   "scripts": {
-    "start": "echo 'This is a static site. Open src/index.html in your browser.'",
-    "build": "echo 'No build process needed for static HTML site.'",
-    "deploy": "echo 'Deploy to Netlify by pushing to connected repository.'"
+    "build": "echo 'Static site - no build required'",
+    "dev": "echo 'Static site - serve from src directory'"
   },
   "keywords": [
     "portfolio",
-    "developer",
-    "fullstack",
-    "product-manager",
-    "ai",
-    "static-site"
+    "nft",
+    "digital-art",
+    "web-development"
   ],
   "author": "Tony Cletus",
-  "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
-  }
+  "license": "MIT"
 } 
