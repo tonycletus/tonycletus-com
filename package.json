@@ -6,8 +6,8 @@
     "node": "18.19.0"
   },
   "scripts": {
-    "build": "echo 'Static site - no build required'",
-    "dev": "echo 'Static site - serve from src directory'"
+    "build": "node build.js",
+    "dev": "node build.js && npx serve dist"
   },
   "keywords": [
     "portfolio",
@@ -16,5 +16,12 @@
     "web-development"
   ],
   "author": "Tony Cletus",
-  "license": "MIT"
-} 
+  "license": "MIT",
+  "devDependencies": {
+    "ejs": "^4.0.1",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^11.3.3",
+    "glob": "^13.0.6",
+    "marked": "^17.0.3"
+  }
+}

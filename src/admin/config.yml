@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/public/uploads"
+public_folder: "public/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/data/home.json"
+        fields:
+          - {label: "Hero Name", name: "hero_name", widget: "string"}
+          - {label: "About Text", name: "about_text", widget: "markdown"}
+          - {label: "About Highlight", name: "about_highlight", widget: "markdown"}
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Live", "Coming Soon", "Unreleased", "Live Research"]}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Live Link URL", name: "link_url", widget: "string", required: false}
+      - {label: "Live Link Text", name: "link_text", widget: "string", required: false}
+      - {label: "GitHub URL", name: "github_url", widget: "string", required: false}
+  - name: "articles"
+    label: "Articles"
+    folder: "src/content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Gallery Image 1", name: "gallery_img1", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
