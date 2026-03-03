@@ -1,11 +1,11 @@
 const fs = require('fs-extra');
 const ejs = require('ejs');
-const { marked } = require('marked');
 const fm = require('front-matter');
 const path = require('path');
 const glob = require('glob');
 
 async function build() {
+    const { marked } = await import('marked');
     // Directories
     const srcDir = path.join(__dirname, 'src');
     const distDir = path.join(__dirname, 'dist');
