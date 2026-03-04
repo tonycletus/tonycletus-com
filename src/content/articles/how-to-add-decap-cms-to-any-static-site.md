@@ -1,8 +1,10 @@
 ---
-title: "How to Add Decap CMS to Any Static Website — A Complete Beginner-Friendly Guide"
-subtitle: "Learn how to set up a free, open-source headless CMS on your static site hosted on Netlify, Cloudflare, or anywhere else — with real examples from tonycletus.com and programmify.org."
-date: "2026-03-04T10:00:00.000Z"
-status: "live"
+title: How to Add Decap CMS to Any Static Website
+subtitle: Learn how to set up a free, open-source headless CMS on your static
+  site hosted on Netlify, Cloudflare, or anywhere else — with real examples from
+  tonycletus.com and programmify.org.
+date: 2026-03-04T10:00:00.000Z
+status: live
 is_external: false
 gallery_img1: ""
 ---
