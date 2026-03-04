@@ -16,6 +16,31 @@ collections:
           - {label: "Hero Name", name: "hero_name", widget: "string"}
           - {label: "About Text", name: "about_text", widget: "markdown"}
           - {label: "About Highlight", name: "about_highlight", widget: "markdown"}
+      - label: "West Sunset Page"
+        name: "westsunset"
+        file: "src/data/westsunset.json"
+        fields:
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}
+          - {label: "Hero Image", name: "hero_image", widget: "image"}
+          - {label: "About Text", name: "about_text", widget: "markdown"}
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Feature Text", name: "text", widget: "string"}
+          - label: "Gallery Images"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Label/Number", name: "label", widget: "string"}
   - name: "projects"
     label: "Projects"
     folder: "src/content/projects"

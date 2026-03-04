@@ -1,0 +1,60 @@
+{
+    "hero_title": "West Sunset NFT Collection",
+    "hero_subtitle": "Capturing the ephemeral beauty of sunset moments on the blockchain",
+    "hero_image": "public/img/sunset-1.jpeg",
+    "about_text": "The **West Sunset NFT Collection** is a curated series of 20 unique digital photos that capture the mesmerizing beauty of sunset moments. Each piece is a 1/1 edition, ensuring exclusivity and rarity for collectors.",
+    "stats": [
+        {
+            "number": "20",
+            "label": "Unique Pieces"
+        },
+        {
+            "number": "1/1",
+            "label": "Edition"
+        },
+        {
+            "number": "ETH",
+            "label": "Blockchain"
+        }
+    ],
+    "features": [
+        {
+            "text": "High-resolution digital art (4K)"
+        },
+        {
+            "text": "1/1 unique editions"
+        },
+        {
+            "text": "Ethereum blockchain"
+        },
+        {
+            "text": "Commercial rights included"
+        }
+    ],
+    "gallery": [
+        {
+            "image": "public/img/sunset-2.jpeg",
+            "label": "#2"
+        },
+        {
+            "image": "public/img/sunset-3.jpeg",
+            "label": "#3"
+        },
+        {
+            "image": "public/img/sunset-4.jpeg",
+            "label": "#4"
+        },
+        {
+            "image": "public/img/sunset-5.jpeg",
+            "label": "#5"
+        },
+        {
+            "image": "public/img/sunset-6.jpeg",
+            "label": "#6"
+        },
+        {
+            "image": "public/img/sunset-7.jpeg",
+            "label": "#7"
+        }
+    ]
+}

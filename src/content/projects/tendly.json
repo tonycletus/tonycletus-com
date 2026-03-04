@@ -1,0 +1,13 @@
+{
+    "title": "Tendly",
+    "status": "Live",
+    "description": "A privacy-first sharing app for sensitive files and notes. Fully encrypted, ephemeral, and frictionless.",
+    "tags": [
+        "Privacy",
+        "Encryption",
+        "Ephemeral"
+    ],
+    "link_url": "https://tendly.xyz",
+    "link_text": "Visit Site",
+    "github_url": "https://github.com/tonycletus/tendly"
+}

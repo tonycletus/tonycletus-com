@@ -1,0 +1,13 @@
+{
+    "title": "Hairmama",
+    "status": "Live",
+    "description": "AI-Powered Hair Analysis platform transforming hair journeys with AI insights. Provides comprehensive analysis, personalized recommendations, and progress tracking with scientific precision.",
+    "tags": [
+        "AI Analysis",
+        "Next.js",
+        "Consumer Tech"
+    ],
+    "link_url": "https://hairmama.vercel.app/",
+    "link_text": "Visit Site",
+    "github_url": "https://github.com/tonycletus/hairmama"
+}

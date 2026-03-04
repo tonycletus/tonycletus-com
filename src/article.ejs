@@ -105,16 +105,8 @@
             <p class="hero-subtitle"><%- article.subtitle || '' %></p>
             <div class="hero-stats">
               <div class="hero-stat">
-                <span class="stat-number">20</span>
-                <span class="stat-label">Unique Pieces</span>
-              </div>
-              <div class="hero-stat">
-                <span class="stat-number">1/1</span>
-                <span class="stat-label">Edition</span>
-              </div>
-              <div class="hero-stat">
-                <span class="stat-number">ETH</span>
-                <span class="stat-label">Blockchain</span>
+                <span class="stat-number"><%- article.readTime %></span>
+                <span class="stat-label">Min Read</span>
               </div>
             </div>
           </div>
@@ -154,39 +146,33 @@
         </section>
         <% } %>
 
-          <!-- CTA Section -->
-          <section class="section cta-section">
-            <div class="cta-container">
-              <div class="cta-content">
-                <h2 class="cta-title">Ready to Own a Piece of Digital Art?</h2>
-                <p class="cta-description">
-                  Explore the complete West Sunset NFT collection on OpenSea. Each piece tells a unique story of
-                  nature's
-                  most beautiful moments.
-                </p>
+          <!-- Newsletter Section -->
+          <section class="section newsletter-section">
+            <div class="newsletter-container">
+              <div class="newsletter-content">
+                <h3 class="newsletter-title">Get Updates</h3>
+                <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
 
-                <div class="cta-actions">
-                  <a href="https://opensea.io/collection/westsunset" target="_blank" rel="noopener noreferrer"
-                    class="cta-button cta-primary">
-                    <i class='bx bx-link-external'></i>
-                    View All on OpenSea
-                  </a>
-                  <a href="/index.html" class="cta-button cta-secondary">
-                    <i class='bx bx-arrow-back'></i>
-                    Back to Portfolio
-                  </a>
-                </div>
+                <form id="newsletter-form" class="newsletter-form" name="newsletter" method="POST" data-netlify="true"
+                  netlify-honeypot="bot-field" novalidate>
+                  <input type="hidden" name="form-name" value="newsletter" />
+                  <p class="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
+                  <div class="form-group">
+                    <input type="email" id="newsletter-email" name="email" class="form-input"
+                      placeholder="Your email address" required autocomplete="email" />
+                    <div class="form-error" id="email-error"></div>
+                  </div>
 
-                <div class="cta-info">
-                  <div class="info-item">
-                    <i class='bx bx-wallet'></i>
-                    <span>Connect your wallet to purchase</span>
-                  </div>
-                  <div class="info-item">
-                    <i class='bx bx-shield-check'></i>
-                    <span>Verified collection on OpenSea</span>
-                  </div>
-                </div>
+                  <button type="submit" class="form-button" id="submit-button">
+                    <span class="button-text">Subscribe</span>
+                    <i class="bx bx-bell button-icon"></i>
+                    <div class="button-loader" id="button-loader"></div>
+                  </button>
+                </form>
               </div>
             </div>
           </section>
@@ -194,7 +180,8 @@
           <!-- Footer -->
           <footer class="footer">
             <p class="footer-text">
-              Made with <i class='bx bx-heart heart-icon'></i> by Tony Cletus
+              Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus
+              &copy; <span id="current-year"></span>
             </p>
           </footer>
     </main>
@@ -202,6 +189,119 @@
 
   <!-- Scripts -->
   <script src="/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Newsletter Form with Enhanced UX
+      class NewsletterForm {
+        constructor() {
+          this.form = document.getElementById('newsletter-form');
+          if (!this.form) return;
+          this.emailInput = document.getElementById('newsletter-email');
+          this.submitButton = document.getElementById('submit-button');
+          this.buttonText = this.submitButton.querySelector('.button-text');
+          this.buttonLoader = document.getElementById('button-loader');
+          this.emailError = document.getElementById('email-error');
+
+          this.initializeForm();
+        }
+
+        initializeForm() {
+          this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+          this.emailInput.addEventListener('input', () => this.clearError());
+          this.emailInput.addEventListener('blur', () => this.validateEmail());
+        }
+
+        validateEmail() {
+          const email = this.emailInput.value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!email) {
+            this.showError('Email is required');
+            return false;
+          }
+
+          if (!emailRegex.test(email)) {
+            this.showError('Please enter a valid email address');
+            return false;
+          }
+
+          return true;
+        }
+
+        showError(message) {
+          this.emailError.textContent = message;
+          this.emailInput.classList.add('input-error');
+        }
+
+        clearError() {
+          this.emailError.textContent = '';
+          this.emailInput.classList.remove('input-error');
+        }
+
+        setLoading(loading) {
+          this.submitButton.disabled = loading;
+          this.emailInput.disabled = loading;
+
+          if (loading) {
+            this.buttonText.textContent = 'Subscribing...';
+            this.buttonLoader.style.display = 'block';
+          } else {
+            this.buttonText.textContent = 'Subscribe';
+            this.buttonLoader.style.display = 'none';
+          }
+        }
+
+        async handleSubmit(e) {
+          e.preventDefault();
+
+          if (!this.validateEmail()) {
+            return;
+          }
+
+          this.setLoading(true);
+
+          try {
+            const formData = new FormData(this.form);
+
+            // Check if we're in development
+            const isDevelopment = window.location.hostname === 'localhost' ||
+              window.location.hostname === '127.0.0.1' ||
+              window.location.hostname === '';
+
+            if (isDevelopment) {
+              await new Promise(resolve => setTimeout(resolve, 1000));
+              window.showToast('Successfully subscribed! Welcome to the community.', 'success');
+              this.form.reset();
+            } else {
+              const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+              });
+
+              if (response.ok) {
+                window.showToast('Successfully subscribed! Welcome to the community.', 'success');
+                this.form.reset();
+              } else {
+                throw new Error(`Form submission failed: ${response.status}`);
+              }
+            }
+          } catch (error) {
+            console.error('Subscription error:', error);
+            window.showToast('Failed to subscribe. Please try again.', 'error');
+          } finally {
+            this.setLoading(false);
+          }
+        }
+      }
+
+      new NewsletterForm();
+
+      // Set current year
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 
 </html>

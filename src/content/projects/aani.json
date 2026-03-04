@@ -1,0 +1,12 @@
+{
+    "title": "AANI",
+    "status": "Live Research",
+    "description": "An offline-first AI assistant built for users without stable internet. Currently actively researching model architectures and AI infrastructure to solve real problems in Africa and the Global South. Available through SMS and local apps.",
+    "tags": [
+        "AI Models",
+        "Offline AI",
+        "Research"
+    ],
+    "link_url": "https://aani.qzz.io",
+    "link_text": "Visit AANI"
+}

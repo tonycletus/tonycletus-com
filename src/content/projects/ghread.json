@@ -1,0 +1,14 @@
+{
+    "title": "ghread",
+    "status": "Live",
+    "description": "A CLI tool that generates beautiful GitHub README profiles instantly. Built with TypeScript and modern tooling for developer productivity.",
+    "tags": [
+        "CLI",
+        "TypeScript",
+        "Developer Tools",
+        "NPM Package"
+    ],
+    "link_url": "https://www.npmjs.com/package/ghread",
+    "link_text": "Install via NPM",
+    "github_url": "https://github.com/tonycletus/ghread"
+}

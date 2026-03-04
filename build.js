@@ -44,10 +44,14 @@ async function build() {
             const parsed = fm(content);
             const bodyHtml = marked.parse(parsed.body);
             const slug = path.basename(file, '.md');
+            const wordCount = parsed.body.split(/\s+/).length;
+            const readTime = Math.ceil(wordCount / 200) || 1;
+
             const articleData = {
                 ...parsed.attributes,
                 slug,
-                body: bodyHtml
+                body: bodyHtml,
+                readTime
             };
 
             // Process article templates
@@ -73,9 +77,21 @@ async function build() {
     const indexHtml = ejs.render(indexTemplate, { home: homeData, projects, liveArticles, upcomingArticles, marked });
     await fs.writeFile(path.join(distDir, 'index.html'), indexHtml);
 
+    // Build westsunset.html 
+    let westsunsetData = {};
+    if (await fs.pathExists(path.join(dataDir, 'westsunset.json'))) {
+        westsunsetData = await fs.readJson(path.join(dataDir, 'westsunset.json'));
+    }
+    if (await fs.pathExists(path.join(srcDir, 'westsunset.ejs'))) {
+        const westsunsetTemplate = await fs.readFile(path.join(srcDir, 'westsunset.ejs'), 'utf-8');
+        const westsunsetHtml = ejs.render(westsunsetTemplate, { page: westsunsetData, marked });
+        await fs.writeFile(path.join(distDir, 'westsunset.html'), westsunsetHtml);
+    }
+
     // Clean up template files and unneeded raw data files in dist
     await fs.remove(path.join(distDir, 'index.ejs'));
     await fs.remove(path.join(distDir, 'article.ejs'));
+    await fs.remove(path.join(distDir, 'westsunset.ejs'));
     await fs.remove(path.join(distDir, 'data'));
     await fs.remove(path.join(distDir, 'content'));
 

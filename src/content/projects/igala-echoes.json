@@ -1,0 +1,13 @@
+{
+    "title": "Igala Echoes",
+    "status": "Live",
+    "description": "A search engine and collection of sacred Igala names, exploring how each name holds a universe of meaning. A cultural preservation project.",
+    "tags": [
+        "Culture",
+        "Search",
+        "Database"
+    ],
+    "link_url": "https://igala.tonycletus.com",
+    "link_text": "Explore Names",
+    "github_url": "https://github.com/tonycletus/igala-echoes"
+}

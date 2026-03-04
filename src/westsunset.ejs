@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>West Sunset NFT Collection - Tony Cletus</title>
+  <meta name="description"
+    content="Explore the West Sunset NFT collection - a unique digital art series capturing the beauty of sunset moments on the blockchain." />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:url" content="https://tonycletus.com/westsunset.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="West Sunset NFT Collection - Tony Cletus" />
+  <meta property="og:description"
+    content="Explore the West Sunset NFT collection - a unique digital art series capturing the beauty of sunset moments on the blockchain." />
+  <meta property="og:image" content="https://tonycletus.com/public/img/sunset-1.jpeg" />
+  <meta property="og:image:alt" content="West Sunset NFT Collection" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Tony Cletus - Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@iamtonycletus" />
+  <meta name="twitter:creator" content="@iamtonycletus" />
+  <meta name="twitter:title" content="West Sunset NFT Collection - Tony Cletus" />
+  <meta name="twitter:description" content="Explore the West Sunset NFT collection - a unique digital art series." />
+  <meta name="twitter:image" content="https://tonycletus.com/public/img/sunset-1.jpeg" />
+  <meta name="twitter:image:alt" content="West Sunset NFT Collection" />
+
+  <!-- Theme and Icons -->
+  <meta name="theme-color" content="#f0f2a1" />
+  <meta name="msapplication-TileColor" content="#f0f2a1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="public/img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon.png" />
+  <link rel="shortcut icon" href="public/img/favicon.ico" />
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="public/manifest.json">
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+    <div class="progress-text" id="progress-text">0%</div>
+  </div>
+
+  <!-- Custom Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main Content -->
+  <div class="app-container">
+    <div class="decorative-line"></div>
+
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-brand">
+          <a href="index.html" class="brand-link">
+            <img src="public/img/logo.png" class="brand-logo" alt="Tony Cletus Logo" />
+            <h1 class="brand-name">Tony Cletus</h1>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <div class="theme-switcher">
+            <i class='bx bx-sun theme-icon'></i>
+            <select id="theme-selector" class="theme-select" aria-label="Select theme">
+              <option value="auto">Auto</option>
+              <option value="dark" selected>Dark</option>
+              <option value="light">Light</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <hr class="divider">
+
+      <!-- Hero Section -->
+      <section class="section hero-section">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title"><%- page.hero_title || 'West Sunset NFT Collection' %></h1>
+            <p class="hero-subtitle"><%- page.hero_subtitle
+                || 'Capturing the ephemeral beauty of sunset moments on the blockchain' %></p>
+            <div class="hero-stats">
+              <% if (page.stats && page.stats.length> 0) { %>
+                <% page.stats.forEach(function(stat) { %>
+                  <div class="hero-stat">
+                    <span class="stat-number"><%- stat.number %></span>
+                    <span class="stat-label"><%- stat.label %></span>
+                  </div>
+                  <% }); %>
+                    <% } %>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="<%- page.hero_image ? (page.hero_image.startsWith('public/') ? page.hero_image : '/' + page.hero_image) : 'public/img/sunset-1.jpeg' %>"
+              alt="West Sunset Collection Preview" class="hero-preview" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Collection Section -->
+      <section class="section about-collection-section">
+        <div class="section-header">
+          <h2 class="section-title">About the Collection</h2>
+          <i class='bx bx-palette section-icon'></i>
+        </div>
+
+        <div class="collection-description">
+          <div class="description-text">
+            <%- typeof marked !=='undefined' && page.about_text ? marked.parse(page.about_text) : (page.about_text || ''
+              ) %>
+          </div>
+
+          <div class="collection-features">
+            <% if (page.features && page.features.length> 0) { %>
+              <% page.features.forEach(function(feature) { %>
+                <div class="feature-item">
+                  <i class='bx bx-check-circle feature-icon'></i>
+                  <span><%- feature.text %></span>
+                </div>
+                <% }); %>
+                  <% } %>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Preview Section -->
+      <section class="section gallery-section">
+        <div class="section-header">
+          <h2 class="section-title">Collection Preview</h2>
+          <i class='bx bx-images section-icon'></i>
+        </div>
+
+        <div class="gallery-grid">
+          <% if (page.gallery && page.gallery.length> 0) { %>
+            <% page.gallery.forEach(function(item) { %>
+              <div class="gallery-item">
+                <img src="<%- item.image ? (item.image.startsWith('public/') ? item.image : '/' + item.image) : '' %>"
+                  alt="Sunset Piece" class="gallery-image" />
+                <div class="gallery-overlay">
+                  <span class="piece-number"><%- item.label %></span>
+                </div>
+              </div>
+              <% }); %>
+                <% } %>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section cta-section">
+        <div class="cta-container">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Own a Piece of Digital Art?</h2>
+            <p class="cta-description">
+              Explore the complete West Sunset NFT collection on OpenSea. Each piece tells a unique story of nature's
+              most beautiful moments.
+            </p>
+
+            <div class="cta-actions">
+              <a href="https://opensea.io/collection/westsunset" target="_blank" rel="noopener noreferrer"
+                class="cta-button cta-primary">
+                <i class='bx bx-link-external'></i>
+                View All on OpenSea
+              </a>
+              <a href="/index.html" class="cta-button cta-secondary">
+                <i class='bx bx-arrow-back'></i>
+                Back to Portfolio
+              </a>
+            </div>
+
+            <div class="cta-info">
+              <div class="info-item">
+                <i class='bx bx-wallet'></i>
+                <span>Connect your wallet to purchase</span>
+              </div>
+              <div class="info-item">
+                <i class='bx bx-shield-check'></i>
+                <span>Verified collection on OpenSea</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-text">
+          Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus
+          &copy; <span id="current-year"></span>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

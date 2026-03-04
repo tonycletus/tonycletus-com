@@ -1,0 +1,11 @@
+{
+    "title": "Nationwide Power Tracker",
+    "status": "Unreleased",
+    "description": "Manual user reporting system for electricity availability in Nigeria. Reports power source (NEPA, generator, solar) with privacy-first local logging.",
+    "tags": [
+        "Privacy",
+        "Local Storage",
+        "Reporting",
+        "Infrastructure"
+    ]
+}

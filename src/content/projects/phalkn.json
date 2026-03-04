@@ -1,0 +1,13 @@
+{
+    "title": "Phalkn",
+    "status": "Live",
+    "description": "A platform for web-based games, featuring highly interactive experiences like Frame Hunter and FlickGuess. Built with modern web technologies and real-time backend integrations.",
+    "tags": [
+        "Gaming",
+        "React",
+        "Vite",
+        "Supabase"
+    ],
+    "link_url": "https://phalkn.com",
+    "link_text": "Play Games"
+}
