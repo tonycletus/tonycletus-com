@@ -2233,10 +2233,20 @@ body.theme-dark {
     font-size: 1.75rem;
   }
   
-  .cta-description {
-    font-size: 1rem;
-  }
 }
 
-
-
+/* Article Badge */
+.article-badge {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--button-text-dark, #000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
