@@ -4,20 +4,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>West Sunset NFT Collection - Tony Cletus</title>
-  <meta name="description"
-    content="Explore the West Sunset NFT collection - a unique digital art series capturing the beauty of sunset moments on the blockchain." />
+  <title><%- article.title %> - Tony Cletus</title>
+  <meta name="description" content="<%- article.subtitle || 'Read this article by Tony Cletus.' %>" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
 
   <!-- Open Graph Protocol -->
-  <meta property="og:url" content="https://tonycletus.com/westsunset.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="West Sunset NFT Collection - Tony Cletus" />
-  <meta property="og:description"
-    content="Explore the West Sunset NFT collection - a unique digital art series capturing the beauty of sunset moments on the blockchain." />
-  <meta property="og:image" content="https://tonycletus.com/public/img/sunset-1.jpeg" />
-  <meta property="og:image:alt" content="West Sunset NFT Collection" />
+  <meta property="og:url" content="https://tonycletus.com/articles/<%- article.slug %>.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="<%- article.title %> - Tony Cletus" />
+  <meta property="og:description" content="<%- article.subtitle || 'Read this article by Tony Cletus.' %>" />
+  <meta property="og:image"
+    content="https://tonycletus.com/<%- (article.gallery_img1 || article.image || 'public/img/og-image.png').replace(/^\/+/, '') %>" />
+  <meta property="og:image:alt" content="<%- article.title %>" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
@@ -27,10 +26,11 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@iamtonycletus" />
   <meta name="twitter:creator" content="@iamtonycletus" />
-  <meta name="twitter:title" content="West Sunset NFT Collection - Tony Cletus" />
-  <meta name="twitter:description" content="Explore the West Sunset NFT collection - a unique digital art series." />
-  <meta name="twitter:image" content="https://tonycletus.com/public/img/sunset-1.jpeg" />
-  <meta name="twitter:image:alt" content="West Sunset NFT Collection" />
+  <meta name="twitter:title" content="<%- article.title %> - Tony Cletus" />
+  <meta name="twitter:description" content="<%- article.subtitle || 'Read this article by Tony Cletus.' %>" />
+  <meta name="twitter:image"
+    content="https://tonycletus.com/<%- (article.gallery_img1 || article.image || 'public/img/og-image.png').replace(/^\/+/, '') %>" />
+  <meta name="twitter:image:alt" content="<%- article.title %>" />
 
   <!-- Theme and Icons -->
   <meta name="theme-color" content="#f0f2a1" />
@@ -119,71 +119,50 @@
         </div>
       </section>
 
-      <!-- About Collection Section -->
       <section class="section about-collection-section">
-        <div class="section-header">
-          <h2 class="section-title">About the Collection</h2>
-          <i class='bx bx-palette section-icon'></i>
-        </div>
-
         <div class="collection-description">
           <%- article.body %>
         </div>
       </section>
 
-      <% if (article.gallery_img1) { %>
-        <section class="section gallery-section">
-          <div class="section-header">
-            <h2 class="section-title">Collection Preview</h2>
-            <i class='bx bx-images section-icon'></i>
-          </div>
+      <!-- Newsletter Section -->
+      <section class="section newsletter-section">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h3 class="newsletter-title">Get Updates</h3>
+            <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
 
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <img src="<%- article.gallery_img1 %>" alt="Preview Image" class="gallery-image" />
-            </div>
-          </div>
-        </section>
-        <% } %>
-
-          <!-- Newsletter Section -->
-          <section class="section newsletter-section">
-            <div class="newsletter-container">
-              <div class="newsletter-content">
-                <h3 class="newsletter-title">Get Updates</h3>
-                <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
-
-                <form id="newsletter-form" class="newsletter-form" name="newsletter" method="POST" data-netlify="true"
-                  netlify-honeypot="bot-field" novalidate>
-                  <input type="hidden" name="form-name" value="newsletter" />
-                  <p class="hidden">
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </p>
-                  <div class="form-group">
-                    <input type="email" id="newsletter-email" name="email" class="form-input"
-                      placeholder="Your email address" required autocomplete="email" />
-                    <div class="form-error" id="email-error"></div>
-                  </div>
-
-                  <button type="submit" class="form-button" id="submit-button">
-                    <span class="button-text">Subscribe</span>
-                    <i class="bx bx-bell button-icon"></i>
-                    <div class="button-loader" id="button-loader"></div>
-                  </button>
-                </form>
+            <form id="newsletter-form" class="newsletter-form" name="newsletter" method="POST" data-netlify="true"
+              netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="newsletter" />
+              <p class="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
+              <div class="form-group">
+                <input type="email" id="newsletter-email" name="email" class="form-input"
+                  placeholder="Your email address" required autocomplete="email" />
+                <div class="form-error" id="email-error"></div>
               </div>
-            </div>
-          </section>
 
-          <!-- Footer -->
-          <footer class="footer">
-            <p class="footer-text">
-              Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus
-              &copy; <span id="current-year"></span>
-            </p>
-          </footer>
+              <button type="submit" class="form-button" id="submit-button">
+                <span class="button-text">Subscribe</span>
+                <i class="bx bx-bell button-icon"></i>
+                <div class="button-loader" id="button-loader"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-text">
+          Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus
+          &copy; <span id="current-year"></span>
+        </p>
+      </footer>
     </main>
   </div>
 

@@ -590,17 +590,19 @@
 
                   <div class="project-links">
                     <% if (project.link_url) { %>
-                      <a href="<%- project.link_url %>" class="project-link" target="_blank" rel="noopener">
-                        <i class="bx bx-link-external"></i>
-                        <%- project.link_text || 'Visit Site' %>
-                      </a>
-                      <% } %>
-                        <% if (project.github_url) { %>
-                          <a href="<%- project.github_url %>" class="project-link" target="_blank" rel="noopener">
-                            <i class="bx bxl-github"></i>
-                            Source
-                          </a>
-                          <% } %>
+                      <% const isExternalProj=project.link_url.startsWith('http'); %>
+                        <a href="<%- project.link_url %>" class="project-link" <%- isExternalProj
+                          ? 'target="_blank" rel="noopener"' : '' %>>
+                          <i class="bx <%- isExternalProj ? 'bx-link-external' : 'bx-link-alt' %>"></i>
+                          <%- project.link_text || 'Visit Site' %>
+                        </a>
+                        <% } %>
+                          <% if (project.github_url) { %>
+                            <a href="<%- project.github_url %>" class="project-link" target="_blank" rel="noopener">
+                              <i class="bx bxl-github"></i>
+                              Source
+                            </a>
+                            <% } %>
                   </div>
             </div>
             <% }); %>
@@ -618,179 +620,79 @@
           <% if (typeof liveArticles !=='undefined' && liveArticles.length> 0) { %>
             <% liveArticles.forEach(function(article) { %>
               <article class="article-item">
-                <i class="bx bx-pen article-icon"></i>
-                <a href="/articles/<%- article.slug %>.html" class="article-link" target="_blank" rel="noopener">
-                  <%- article.title %>
-                </a>
+                <% if (article.gallery_img1) { %>
+                  <img
+                    src="<%- article.gallery_img1.startsWith('public/') ? '/' + article.gallery_img1 : article.gallery_img1 %>"
+                    alt="Thumbnail" class="article-thumb"
+                    style="width: 24px; height: 24px; border-radius: 4px; object-fit: cover; margin-right: 0.5rem;" />
+                  <% } else { %>
+                    <i class="bx bx-pen article-icon"></i>
+                    <% } %>
+                      <a href="<%- article.is_external ? article.external_url : '/articles/' + article.slug + '.html' %>"
+                        class="article-link" <% if (article.is_external) { %>target="_blank" rel="noopener"<% } %>>
+                          <span class="article-title-text"><%- article.title %></span>
+                          <% if (article.is_external && article.external_source) { %>
+                            <span class="article-badge"><%- article.external_source %></span>
+                            <% } %>
+                      </a>
               </article>
               <% }); %>
                 <% } %>
 
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://medium.com/@TonyCletus/silicon-valley-is-not-just-a-place-it-is-a-state-of-mind-2484c1bf5fd7"
-                      class="article-link" target="_blank" rel="noopener">
-                      Silicon Valley is not Just A Place, It is A State of Mind
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="/src/posts/estam-digital-marketing.html" class="article-link" target="_blank"
-                      rel="noopener">
-                      Useful Digital Marketing Tools for Your Online Busines
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://tonycletus.hashnode.dev/15-websites-you-can-promote-your-product-as-an-indie-maker-ckp6j18d409wdmds1dnrobbru"
-                      class="article-link" target="_blank" rel="noopener">
-                      15 websites you can promote your product as an indie maker
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://dev.to/tonycletus/the-outcomes-of-developers-embracing-no-code-2bpi"
-                      class="article-link" target="_blank" rel="noopener">
-                      The outcomes of developers embracing No-code
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://dev.to/tonycletus/fuck-imposter-syndrome-2089" class="article-link" target="_blank"
-                      rel="noopener">
-                      Fvck Imposter Syndrome!
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://www.linkedin.com/pulse/complete-company-guide-okrs-methodology-front-back-tony-cletus"
-                      class="article-link" target="_blank" rel="noopener">
-                      The Complete Company Guide on OKRs Methodology – Front to Back
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://medium.com/tonycletus/the-effect-of-web-programming-on-scientific-innovation-a59108dda369"
-                      class="article-link" target="_blank" rel="noopener">
-                      The Effect of Web Programming on Scientific Innovation
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://medium.com/tonycletus/how-to-become-a-self-taught-programmer-you-can-do-it-2bffea6615f"
-                      class="article-link" target="_blank" rel="noopener">
-                      How To Become A Self-Taught Programmer, You Can Do It!
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://www.linkedin.com/pulse/steps-successfully-manage-your-goals-okrs-tony-cletus"
-                      class="article-link" target="_blank" rel="noopener">
-                      Steps To Successfully Manage Your Goals With OKRs
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://www.linkedin.com/pulse/tips-improve-employee-feedback-quality-your-tony-cletus"
-                      class="article-link" target="_blank" rel="noopener">
-                      Tips To Improve Employee Feedback Quality in Your Organization
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://www.linkedin.com/pulse/how-engage-your-team-overcome-company-challenges-tony-cletus"
-                      class="article-link" target="_blank" rel="noopener">
-                      How To Engage Your Team and Overcome Your Company Challenges
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://medium.com/tonycletus/the-truth-about-gender-gap-in-the-tech-field-a-call-to-extirpate-this-stereotype-5810023545fe"
-                      class="article-link" target="_blank" rel="noopener">
-                      The Truth About Gender Gap In The Tech Field: A Call To Extirpate This Stereotype
-                    </a>
-                  </article>
-
-                  <article class="article-item">
-                    <i class="bx bx-pen article-icon"></i>
-                    <a href="https://medium.com/tonycletus/an-insight-into-the-domain-of-computer-programming-and-its-relevance-importance-to-the-world-of-40d0a45c127c"
-                      class="article-link" target="_blank" rel="noopener">
-                      An Insight Into the Domain of Computer Programming and Its Importance to the World of Technology
-                    </a>
-                  </article>
-
-                  <div class="articles-upcoming">
-                    <h3 class="upcoming-title">Upcoming Articles</h3>
-                    <article class="article-item article-upcoming">
-                      <i class="bx bx-time article-icon"></i>
-                      <span class="article-link">Exploring LLM-Powered Developer Tools: From Vision to Prototype</span>
-                    </article>
-                    <article class="article-item article-upcoming">
-                      <i class="bx bx-time article-icon"></i>
-                      <span class="article-link">Why We Are Building AANI</span>
-                    </article>
-                    <article class="article-item article-upcoming">
-                      <i class="bx bx-time article-icon"></i>
-                      <span class="article-link">Tendly: Building for Ephemeral Privacy</span>
-                    </article>
-                    <article class="article-item article-upcoming">
-                      <i class="bx bx-time article-icon"></i>
-                      <span class="article-link">SLM vs LLM, comparing lightweight and large-scale models</span>
-                    </article>
-                  </div>
+                  <% if (typeof upcomingArticles !=='undefined' && upcomingArticles.length> 0) { %>
+                    <div class="articles-upcoming">
+                      <h3 class="upcoming-title">Upcoming Articles</h3>
+                      <% upcomingArticles.forEach(function(article) { %>
+                        <article class="article-item article-upcoming">
+                          <i class="bx bx-time article-icon"></i>
+                          <span class="article-link"><%- article.title %></span>
+                        </article>
+                        <% }); %>
+                    </div>
+                    <% } %>
         </div>
-      </section>
+  </div>
+  </section>
 
-      <!-- Newsletter Section -->
-      <section class="section newsletter-section">
-        <div class="newsletter-container">
-          <div class="newsletter-content">
-            <h3 class="newsletter-title">Get Updates</h3>
-            <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
+  <!-- Newsletter Section -->
+  <section class="section newsletter-section">
+    <div class="newsletter-container">
+      <div class="newsletter-content">
+        <h3 class="newsletter-title">Get Updates</h3>
+        <p class="newsletter-description">Stay updated with my latest projects and insights.</p>
 
-            <form id="newsletter-form" class="newsletter-form" name="newsletter" method="POST" data-netlify="true"
-              netlify-honeypot="bot-field" novalidate>
-              <input type="hidden" name="form-name" value="newsletter" />
-              <p class="hidden">
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </p>
-              <div class="form-group">
-                <input type="email" id="newsletter-email" name="email" class="form-input"
-                  placeholder="Your email address" required autocomplete="email" />
-                <div class="form-error" id="email-error"></div>
-              </div>
-
-              <button type="submit" class="form-button" id="submit-button">
-                <span class="button-text">Subscribe</span>
-                <i class="bx bx-bell button-icon"></i>
-                <div class="button-loader" id="button-loader"></div>
-              </button>
-            </form>
+        <form id="newsletter-form" class="newsletter-form" name="newsletter" method="POST" data-netlify="true"
+          netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="newsletter" />
+          <p class="hidden">
+            <label>
+              Don't fill this out if you're human: <input name="bot-field" />
+            </label>
+          </p>
+          <div class="form-group">
+            <input type="email" id="newsletter-email" name="email" class="form-input" placeholder="Your email address"
+              required autocomplete="email" />
+            <div class="form-error" id="email-error"></div>
           </div>
-        </div>
-      </section>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p class="footer-text">
-          Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus
-          &copy; <span id="current-year"></span>
-        </p>
-      </footer>
-    </main>
+          <button type="submit" class="form-button" id="submit-button">
+            <span class="button-text">Subscribe</span>
+            <i class="bx bx-bell button-icon"></i>
+            <div class="button-loader" id="button-loader"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">
+      Built with <span class="heart-icon"><i class="bx bx-heart"></i></span> by Tony Cletus
+      &copy; <span id="current-year"></span>
+    </p>
+  </footer>
+  </main>
   </div>
 
   <!-- Scripts -->

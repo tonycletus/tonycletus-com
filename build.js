@@ -25,7 +25,7 @@ async function build() {
         homeData = await fs.readJson(path.join(dataDir, 'home.json'));
     }
 
-    // Load projects
+    // Load projects and sort
     const projects = [];
     if (await fs.pathExists(projectsDir)) {
         const projectFiles = glob.sync(`${projectsDir}/*.json`);
@@ -33,8 +33,10 @@ async function build() {
             projects.push(await fs.readJson(file));
         }
     }
+    // Sort projects alphabetically from a to z
+    projects.sort((a, b) => a.title.localeCompare(b.title));
 
-    // Load articles
+    // Load articles and sort
     let upcomingArticles = [];
     let liveArticles = [];
     if (await fs.pathExists(articlesDir)) {
@@ -54,22 +56,27 @@ async function build() {
                 readTime
             };
 
-            // Process article templates
-            if (await fs.pathExists(path.join(srcDir, 'article.ejs'))) {
+            // Process article templates only for internal articles
+            if (!articleData.is_external && await fs.pathExists(path.join(srcDir, 'article.ejs'))) {
                 const articleTemplate = await fs.readFile(path.join(srcDir, 'article.ejs'), 'utf-8');
-                const articleHtml = ejs.render(articleTemplate, { article: articleData });
+                const articleHtml = ejs.render(articleTemplate, { article: articleData, marked });
 
                 await fs.ensureDir(path.join(distDir, 'articles'));
                 await fs.writeFile(path.join(distDir, 'articles', `${slug}.html`), articleHtml);
             }
 
-            // Push to arrays based on "status" or assume all are live if no status
+            // Push to arrays
             if (articleData.status === 'upcoming') {
                 upcomingArticles.push(articleData);
             } else {
                 liveArticles.push(articleData);
             }
         }
+
+        // Sort articles by date descending
+        const dateSort = (a, b) => new Date(b.date || 0) - new Date(a.date || 0);
+        liveArticles.sort(dateSort);
+        upcomingArticles.sort(dateSort);
     }
 
     // Build index.html NOW, because it has all extracted data 

@@ -62,6 +62,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string"}
-      - {label: "Gallery Image 1", name: "gallery_img1", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Status", name: "status", widget: "select", options: ["live", "upcoming"], default: "live"}
+      - {label: "Is External", name: "is_external", widget: "boolean", default: false, required: false}
+      - {label: "External URL", name: "external_url", widget: "string", required: false}
+      - {label: "External Source", name: "external_source", widget: "string", required: false, hint: "E.g., Medium, LinkedIn, Dev.to"}
+      - {label: "Thumbnail Image", name: "gallery_img1", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
