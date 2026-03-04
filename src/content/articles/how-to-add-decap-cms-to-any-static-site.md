@@ -1,7 +1,7 @@
 ---
 title: How to Add Decap CMS to Any Static Website
 subtitle: Learn how to set up a free, open-source headless CMS on your static
-  site hosted on Netlify, Cloudflare, or anywhere else — with real examples from
+  site hosted on Netlify, Cloudflare, or anywhere else - with real examples from
   tonycletus.com and programmify.org.
 date: 2026-03-04T10:00:00.000Z
 status: live
@@ -11,16 +11,16 @@ gallery_img1: ""
 
 ## What is Decap CMS?
 
-**Decap CMS** (formerly known as Netlify CMS) is a **free, open-source, Git-based headless content management system**. It gives you a clean, easy-to-use admin interface right inside your website (e.g., `yoursite.com/admin`) where you can create, edit, and delete content — blog posts, pages, projects — without ever touching code.
+**Decap CMS** (formerly known as Netlify CMS) is a **free, open-source, Git-based headless content management system**. It gives you a clean, easy-to-use admin interface right inside your website (e.g., `yoursite.com/admin`) where you can create, edit, and delete content - blog posts, pages, projects - without ever touching code.
 
 ### Why Decap CMS?
 
-- **100% Free** — No subscription, no pricing tiers. Ever.
-- **Open Source** — The source code is on [GitHub](https://github.com/decaporg/decap-cms). You can inspect, fork, or contribute.
-- **Git-Based** — Every content edit creates a Git commit. Your content lives in your repo alongside your code. Full version history, rollback, branching — all for free.
-- **Works with Any Static Site Generator** — Hugo, Jekyll, Eleventy, Next.js, Gatsby, or your own custom setup (like mine).
-- **Works with Any Host** — Netlify, Cloudflare Pages, Vercel, GitHub Pages, or your own server.
-- **No Database Required** — Content is stored as Markdown files, JSON files, or YAML files right inside your Git repository.
+- **100% Free** - No subscription, no pricing tiers. Ever.
+- **Open Source** - The source code is on [GitHub](https://github.com/decaporg/decap-cms). You can inspect, fork, or contribute.
+- **Git-Based** - Every content edit creates a Git commit. Your content lives in your repo alongside your code. Full version history, rollback, branching - all for free.
+- **Works with Any Static Site Generator** - Hugo, Jekyll, Eleventy, Next.js, Gatsby, or your own custom setup (like mine).
+- **Works with Any Host** - Netlify, Cloudflare Pages, Vercel, GitHub Pages, or your own server.
+- **No Database Required** - Content is stored as Markdown files, JSON files, or YAML files right inside your Git repository.
 
 ### Official Resources
 
@@ -47,7 +47,7 @@ Here is what happens under the hood:
 
 ## Part 1: Adding Decap CMS to a Custom Static Site on Netlify
 
-This is exactly what I did for **[tonycletus.com](https://tonycletus.com)**. My site uses a custom build system with **EJS templates** and a **Node.js build script** (`build.js`). No framework at all — just plain files.
+This is exactly what I did for **[tonycletus.com](https://tonycletus.com)**. My site uses a custom build system with **EJS templates** and a **Node.js build script** (`build.js`). No framework at all - just plain files.
 
 ### Step 1: Create the Admin Files
 
@@ -73,8 +73,8 @@ Inside your project's source directory, create an `admin` folder with two files:
 ```
 
 This is the page that loads the entire CMS. It pulls two scripts:
-- **Netlify Identity Widget** — handles login/authentication.
-- **Decap CMS** — the actual CMS app.
+- **Netlify Identity Widget** - handles login/authentication.
+- **Decap CMS** - the actual CMS app.
 
 **`admin/config.yml`**
 
@@ -146,7 +146,7 @@ Then, add this redirect script at the bottom of your main page so users are take
 2. Navigate to **Site settings → Identity** and click **Enable Identity**.
 3. Under **Registration preferences**, select **Invite only** (so only you can log in).
 4. Scroll down to **Services → Git Gateway** and click **Enable Git Gateway**.
-5. Go to the **Identity** tab and click **Invite users** — invite your own email.
+5. Go to the **Identity** tab and click **Invite users** - invite your own email.
 
 ### Step 4: Build Your Content with a Static Site Generator
 
@@ -220,7 +220,7 @@ Deploy your site. Then visit `https://yoursite.com/admin/`. Log in with the emai
 
 ## Part 2: Adding Decap CMS to a Hugo Site on Cloudflare Pages
 
-This is the approach I used for **[programmify.org](https://programmify.org)** — a Hugo site deployed on Cloudflare Pages.
+This is the approach I used for **[programmify.org](https://programmify.org)** - a Hugo site deployed on Cloudflare Pages.
 
 ### Step 1: Create the Admin Files
 
@@ -242,7 +242,7 @@ In Hugo, static files go in the `static/` directory. Create:
 </html>
 ```
 
-> **Note:** No Netlify Identity script here — we will use GitHub OAuth instead since we are on Cloudflare, not Netlify.
+> **Note:** No Netlify Identity script here - we will use GitHub OAuth instead since we are on Cloudflare, not Netlify.
 
 **`static/admin/config.yml`**
 
@@ -338,7 +338,7 @@ In **Cloudflare Pages → Your Project → Settings → Builds & Deployments:**
 | Root directory | `/` |
 | Environment variable | `HUGO_VERSION` = `0.121.0` (or your version) |
 
-Cloudflare Pages automatically rebuilds when you push to your repo — including commits made by Decap CMS.
+Cloudflare Pages automatically rebuilds when you push to your repo - including commits made by Decap CMS.
 
 ---
 
@@ -377,7 +377,7 @@ Widgets define what kind of form field appears in the admin UI:
 
 ### Collection Types
 
-**Folder collections** — Content stored as individual files in a folder. Best for repeatable content like blog posts, projects, etc.
+**Folder collections** - Content stored as individual files in a folder. Best for repeatable content like blog posts, projects, etc.
 
 ```yaml
 - name: "blog"
@@ -388,7 +388,7 @@ Widgets define what kind of form field appears in the admin UI:
     - {label: "Title", name: "title", widget: "string"}
 ```
 
-**File collections** — Content stored in specific named files. Best for singleton pages like "Home", "About", etc.
+**File collections** - Content stored in specific named files. Best for singleton pages like "Home", "About", etc.
 
 ```yaml
 - name: "pages"
@@ -483,9 +483,9 @@ collections:
 ```
 
 This gives me three collections to manage from `tonycletus.com/admin`:
-- **Pages** — Edit the Home page and the West Sunset project page.
-- **Projects** — Add, edit, or remove portfolio projects.
-- **Articles** — Write new blog posts or link to external articles.
+- **Pages** - Edit the Home page and the West Sunset project page.
+- **Projects** - Add, edit, or remove portfolio projects.
+- **Articles** - Write new blog posts or link to external articles.
 
 ---
 
@@ -605,4 +605,4 @@ YAML is whitespace-sensitive. Use 2 spaces for indentation (never tabs). Use a Y
 
 Decap CMS removes the friction of managing content on static sites. You get the speed and security of static hosting with the editing convenience of a traditional CMS. No database. No server. No cost. Just Git.
 
-If you found this useful, share it with a fellow builder. And if you build something with Decap CMS, I would love to see it — reach out on [Twitter @iamtonycletus](https://twitter.com/iamtonycletus).
+If you found this useful, share it with a fellow builder. And if you build something with Decap CMS, I would love to see it - reach out on [Twitter @iamtonycletus](https://twitter.com/iamtonycletus).

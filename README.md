@@ -1,5 +1,6 @@
 # Tony Cletus - Portfolio Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/250124cc-300a-49ed-8250-1e4be72cd416/deploy-status)](https://app.netlify.com/projects/pensive-curran-7396c5/deploys)
 A modern, responsive portfolio website showcasing Tony Cletus's work as a Full-Stack Developer, Product Manager, and AI researcher.
 
 ## 🚀 Features
