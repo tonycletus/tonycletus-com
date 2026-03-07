@@ -229,3 +229,85 @@ Here is a simplified version of my `build.js` that reads Markdown articles and r
 
 
 
+```javascript
+const fs = require('fs-extra');
+const ejs = require('ejs');
+const fm = require('front-matter');
+const path = require('path');
+const glob = require('glob');
+
+
+
+
+async function build() {
+    const { marked } = await import('marked');
+    const srcDir = path.join(__dirname, 'src');
+    const distDir = path.join(__dirname, 'dist');
+    const articlesDir = path.join(srcDir, 'content', 'articles');
+
+
+
+
+    await fs.emptyDir(distDir);
+    await fs.copy(srcDir, distDir);
+
+
+
+
+    // Process each Markdown article
+    const articleFiles = glob.sync(`${articlesDir}/*.md`);
+    for (const file of articleFiles) {
+        const content = await fs.readFile(file, 'utf-8');
+        const parsed = fm(content);           // Extract front-matter
+        const bodyHtml = marked.parse(parsed.body); // Convert Markdown to HTML
+        const slug = path.basename(file, '.md');
+
+
+
+
+        const articleData = {
+            ...parsed.attributes,  // title, date, thumbnail, etc.
+            slug,
+            body: bodyHtml,
+        };
+
+
+
+
+        // Render the article template
+        const template = await fs.readFile(
+            path.join(srcDir, 'article.ejs'), 'utf-8'
+        );
+        const html = ejs.render(template, { article: articleData });
+
+
+
+
+        await fs.ensureDir(path.join(distDir, 'articles'));
+        await fs.writeFile(
+            path.join(distDir, 'articles', `${slug}.html`), html
+        );
+    }
+
+
+
+
+    // Clean up template files in dist
+    await fs.remove(path.join(distDir, 'article.ejs'));
+    await fs.remove(path.join(distDir, 'content'));
+
+
+
+
+    console.log('Build successful!');
+}
+
+
+
+
+build();
+```
+
+
+
+
