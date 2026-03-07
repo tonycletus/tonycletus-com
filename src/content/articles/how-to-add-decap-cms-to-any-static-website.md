@@ -151,3 +151,28 @@ Let me break down every line:
 
 
 
+| Key | What It Does |
+|---|---|
+| `backend.name: git-gateway` | Uses Netlify's Git Gateway to read/write your repo |
+| `backend.branch: main` | Targets the `main` branch |
+| `media_folder` | Where uploaded images are saved in your repo |
+| `public_folder` | The public URL path to those images at runtime |
+| `collections` | Defines the types of content you can manage |
+| `folder` | The directory where content files are stored |
+| `create: true` | Allows creating new entries (not just editing) |
+| `slug` | The filename pattern for new entries |
+| `fields` | The form fields in the admin UI |
+
+
+
+
+### Step 2: Add the Netlify Identity Widget to Your Site
+
+
+
+
+Add this script tag to every page on your main site (e.g., your `index.html`):
+
+
+
+
