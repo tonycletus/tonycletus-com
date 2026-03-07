@@ -78,7 +78,22 @@ Inside your project's source directory, create an `admin` folder with two files:
 
 
 
-
+```html
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+    <!-- Include the Netlify Identity widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <!-- Include the Decap CMS script -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>
+```
 
 
 
@@ -119,7 +134,7 @@ collections:
     label: "Articles"
     folder: "src/content/articles"
     create: true
-    slug: "{{slug}}"
+   
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
@@ -350,7 +365,19 @@ In Hugo, static files go in the `static/` directory. Create:
 
 
 
-
+```html
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+</head>
+<body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>
+```
 
 
 
@@ -385,7 +412,7 @@ collections:
     label: "Blog Posts"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+   
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
@@ -700,7 +727,7 @@ collections:
     label: "Projects"
     folder: "src/content/projects"
     create: true
-    slug: "{{slug}}"
+    
     extension: "json"
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -715,7 +742,7 @@ collections:
     label: "Articles"
     folder: "src/content/articles"
     create: true
-    slug: "{{slug}}"
+  
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
@@ -944,5 +971,6 @@ Decap CMS removes the friction of managing content on static sites. You get the 
 
 
 If you found this useful, share it with a fellow builder. And if you build something with Decap CMS, I would love to see it - reach out on [Twitter @iamtonycletus](https://twitter.com/iamtonycletus).
+
 
 
