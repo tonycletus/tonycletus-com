@@ -176,3 +176,56 @@ Add this script tag to every page on your main site (e.g., your `index.html`):
 
 
 
+```html
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+```
+
+
+
+
+Then, add this redirect script at the bottom of your main page so users are taken to the admin after login:
+
+
+
+
+```html
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+```
+
+
+
+
+### Step 3: Enable Netlify Identity + Git Gateway
+
+
+
+
+1. Go to [app.netlify.com](https://app.netlify.com) and open your site.
+2. Navigate to **Site settings → Identity** and click **Enable Identity**.
+3. Under **Registration preferences**, select **Invite only** (so only you can log in).
+4. Scroll down to **Services → Git Gateway** and click **Enable Git Gateway**.
+5. Go to the **Identity** tab and click **Invite users** - invite your own email.
+
+
+
+
+### Step 4: Build Your Content with a Static Site Generator
+
+
+
+
+Here is a simplified version of my `build.js` that reads Markdown articles and renders them with EJS:
+
+
+
+
