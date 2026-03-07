@@ -2279,3 +2279,137 @@ body.theme-dark {
   letter-spacing: 0.5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* ============================================
+   Article Body Styles
+   ============================================ */
+.article-body-section .collection-description {
+  display: block;
+}
+
+.article-body-section .collection-description h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.article-body-section .collection-description h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.article-body-section .collection-description p {
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
+.article-body-section .collection-description ul,
+.article-body-section .collection-description ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.article-body-section .collection-description li {
+  margin-bottom: 0.5rem;
+}
+
+.article-body-section .collection-description a {
+  color: var(--hyperlink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-body-section .collection-description a:hover {
+  opacity: 0.8;
+}
+
+.article-body-section .collection-description pre {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.article-body-section .collection-description code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+.article-body-section .collection-description p code,
+.article-body-section .collection-description li code,
+.article-body-section .collection-description td code {
+  background: rgba(240, 242, 161, 0.1);
+  border: 1px solid rgba(240, 242, 161, 0.2);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.85em;
+  color: var(--accent-color);
+}
+
+.article-body-section .collection-description table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  display: table;
+  overflow-x: auto;
+}
+
+.article-body-section .collection-description thead {
+  background: rgba(240, 242, 161, 0.1);
+}
+
+.article-body-section .collection-description th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--border-color);
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.article-body-section .collection-description td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.article-body-section .collection-description tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.article-body-section .collection-description blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: rgba(240, 242, 161, 0.05);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+}
+
+.article-body-section .collection-description hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2.5rem 0;
+}
+
+.article-body-section .collection-description strong {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.article-body-section .collection-description img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+}
