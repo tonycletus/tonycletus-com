@@ -115,39 +115,3 @@ This is the heart of Decap CMS. It defines your backend, media storage, and cont
 
 
 
-```yaml
-backend:
-  name: git-gateway
-  branch: main
-
-
-
-
-media_folder: "src/public/uploads"
-public_folder: "public/uploads"
-
-
-
-
-collections:
-  - name: "articles"
-    label: "Articles"
-    folder: "src/content/articles"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Thumbnail Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-```
-
-
-
-
-Let me break down every line:
-
-
-
-
